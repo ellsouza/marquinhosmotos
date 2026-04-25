@@ -1,0 +1,923 @@
+Loaded Prisma config from prisma.config.ts.
+
+Prisma schema loaded from prisma\schema.prisma.
+⚠ Your page app/loja/page.tsx did not have a root layout. We created app\layout.tsx for you.
+⚠ Your page app/conta/page.tsx did not have a root layout. We created app\layout.tsx for you.
+⨯ ./src/components/store/store-footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\src\components\store\store-footer.tsx
+    1: O sistema não pode encontrar o arquivo especificado. (os error 2)
+
+Import trace for requested module:
+./src/components/store/store-footer.tsx
+./src/app/layout.tsx
+[browser] ./src/components/store/store-footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\src\components\store\store-footer.tsx
+    1: O sistema não pode encontrar o arquivo especificado. (os error 2)
+
+Import trace for requested module:
+./src/components/store/store-footer.tsx
+./src/app/layout.tsx 
+[browser] ./src/components/store/store-info.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\src\components\store\store-info.tsx
+    1: O sistema não pode encontrar o arquivo especificado. (os error 2)
+
+Import trace for requested module:
+./src/components/store/store-info.tsx
+./src/app/loja/page.tsx 
+[browser] ./src/components/store/store-info.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\src\components\store\store-info.tsx
+    1: O sistema não pode encontrar o arquivo especificado. (os error 2)
+
+Import trace for requested module:
+./src/components/store/store-info.tsx
+./src/app/loja/page.tsx 
+⨯ ./src/components/store/store-info.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\src\components\store\store-info.tsx
+    1: O sistema não pode encontrar o arquivo especificado. (os error 2)
+
+Import trace for requested module:
+./src/components/store/store-info.tsx
+./src/app/loja/page.tsx
+[browser] ./src/components/store/store-info.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\src\components\store\store-info.tsx
+    1: O sistema não pode encontrar o arquivo especificado. (os error 2) 
+[browser] Uncaught ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\src\components\store\store-info.tsx
+    1: O sistema não pode encontrar o arquivo especificado. (os error 2)
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[browser] ./src/components/store/whatsapp-cta.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\src\components\store\whatsapp-cta.tsx
+    1: O sistema não pode encontrar o arquivo especificado. (os error 2)
+
+Import trace for requested module:
+./src/components/store/whatsapp-cta.tsx
+./src/app/conta/page.tsx 
+[browser] ./src/components/store/whatsapp-cta.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\src\components\store\whatsapp-cta.tsx
+    1: O sistema não pode encontrar o arquivo especificado. (os error 2)
+
+Import trace for requested module:
+./src/components/store/whatsapp-cta.tsx
+./src/app/loja/page.tsx 
+⨯ ./src/components/store/whatsapp-cta.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\src\components\store\whatsapp-cta.tsx
+    1: O sistema não pode encontrar o arquivo especificado. (os error 2)
+
+Import trace for requested module:
+./src/components/store/whatsapp-cta.tsx
+./src/app/conta/page.tsx
+[browser] ./src/components/store/whatsapp-cta.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\src\components\store\whatsapp-cta.tsx
+    1: O sistema não pode encontrar o arquivo especificado. (os error 2)
+
+Import trace for requested module:
+./src/components/store/whatsapp-cta.tsx
+./src/app/conta/page.tsx 
+[browser] ./src/lib/store.ts
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\src\lib\store.ts
+    1: O sistema não pode encontrar o arquivo especificado. (os error 2)
+
+Import trace for requested module:
+./src/lib/store.ts
+./src/components/store/whatsapp-cta.tsx
+./src/app/conta/page.tsx 
+[browser] ./src/lib/store.ts
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\src\lib\store.ts
+    1: O sistema não pode encontrar o arquivo especificado. (os error 2)
+
+Import trace for requested module:
+./src/lib/store.ts
+./src/components/store/store-footer.tsx
+./src/app/layout.tsx 
+⨯ ./src/lib/store.ts
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\src\lib\store.ts
+    1: O sistema não pode encontrar o arquivo especificado. (os error 2)
+
+Import trace for requested module:
+./src/lib/store.ts
+./src/components/store/whatsapp-cta.tsx
+./src/app/conta/page.tsx
+⨯ ./src/lib/store.ts
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\src\lib\store.ts
+    1: O sistema não pode encontrar o arquivo especificado. (os error 2)
+
+Import trace for requested module:
+./src/lib/store.ts
+./src/components/store/whatsapp-cta.tsx
+./src/app/conta/page.tsx
+[browser] ./src/lib/store.ts
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\src\lib\store.ts
+    1: O sistema não pode encontrar o arquivo especificado. (os error 2)
+
+Import trace for requested module:
+./src/lib/store.ts
+./src/components/store/whatsapp-cta.tsx
+./src/app/conta/page.tsx 
+⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⨯ ./src/components/store/store-footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\src\components\store\store-footer.tsx
+    1: O sistema não pode encontrar o arquivo especificado. (os error 2)
+
+Import trace for requested module:
+./src/components/store/store-footer.tsx
+./src/app/layout.tsx
+[browser] Uncaught ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\src\components\store\store-footer.tsx
+    1: O sistema não pode encontrar o arquivo especificado. (os error 2)
+⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[browser] Image with src "/img/sitebg.png" has "fill" and parent element with invalid "position". Provided "sticky" should be one of absolute,fixed,relative.
+[browser] Image with src "/img/sitebg.png" has "fill" and parent element with invalid "position". Provided "sticky" should be one of absolute,fixed,relative.
+[browser] Image with src "/img/sitebg.png" has "fill" and parent element with invalid "position". Provided "sticky" should be one of absolute,fixed,relative.
+⨯ ./src/components/store/store-footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\src\components\store\store-footer.tsx
+    1: O sistema não pode encontrar o arquivo especificado. (os error 2)
+
+Import trace for requested module:
+./src/components/store/store-footer.tsx
+./src/app/layout.tsx
+[browser] Uncaught ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\src\components\store\store-footer.tsx
+    1: O sistema não pode encontrar o arquivo especificado. (os error 2)
+[browser] ./src/components/store/store-footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\src\components\store\store-footer.tsx
+    1: O sistema não pode encontrar o arquivo especificado. (os error 2) 
+[browser] Uncaught ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\src\components\store\store-footer.tsx
+    1: O sistema não pode encontrar o arquivo especificado. (os error 2)
+[browser] ./src/components/store/store-footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\src\components\store\store-footer.tsx
+    1: O sistema não pode encontrar o arquivo especificado. (os error 2) 
+[browser] Uncaught ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\src\components\store\store-footer.tsx
+    1: O sistema não pode encontrar o arquivo especificado. (os error 2)
+[browser] ./src/components/store/store-footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\src\components\store\store-footer.tsx
+    1: O sistema não pode encontrar o arquivo especificado. (os error 2) 
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[browser] Image with src "/_next/static/media/sitebg.737abd3c.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[browser] Image with src "/_next/static/media/sitebg.737abd3c.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[browser] Image with src "/_next/static/media/sitebg.737abd3c.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[browser] Image with src "/_next/static/media/sitebg.737abd3c.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[browser] Image with src "/_next/static/media/sitebg.737abd3c.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[browser] Image with src "/_next/static/media/sitebg.737abd3c.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[browser] Image with src "/_next/static/media/sitebg.737abd3c.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[browser] ./src/app/layout.tsx
+Error:   x Expected unicode escape
+   ,-[C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\src\app\layout.tsx:7:1]
+ 4 | import Link from "next/link";
+ 5 | import Image from "next/image";
+ 6 | import { CartProvider } from "@/components/cart/cart-provider";
+ 7 | import { HeaderNav } from "@/components/layout/header-nav";\nimport { StoreFooter } from "@/components/store/store-footer";
+   :                                                            ^
+ 8 | import { getStorePublicConfig } from "@/lib/store";
+ 9 | import { buildWhatsAppLink } from "@/lib/whatsapp";
+   `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/layout.tsx 
+⨯ ./src/app/layout.tsx
+Error:   x Expected unicode escape
+   ,-[C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\src\app\layout.tsx:7:1]
+ 4 | import Link from "next/link";
+ 5 | import Image from "next/image";
+ 6 | import { CartProvider } from "@/components/cart/cart-provider";
+ 7 | import { HeaderNav } from "@/components/layout/header-nav";\nimport { StoreFooter } from "@/components/store/store-footer";
+   :                                                            ^
+ 8 | import { getStorePublicConfig } from "@/lib/store";
+ 9 | import { buildWhatsAppLink } from "@/lib/whatsapp";
+   `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/layout.tsx
+⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[browser] Image with src "/_next/static/media/sitebg.737abd3c.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[browser] Image with src "/_next/static/media/sitebg.737abd3c.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[browser] ./src/components/store/store-footer.tsx
+Module parse failed: Identifier 'Link' has already been declared (3:7)
+| import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+| import Link from "next/link";
+> import Link from "next/link";
+| import Image from "next/image";
+| import { getStorePublicConfig } from "@/lib/store";
+
+Import trace for requested module:
+./src/components/store/store-footer.tsx
+./src/app/layout.tsx 
+⨯ ./src/components/store/store-footer.tsx
+Module parse failed: Identifier 'Link' has already been declared (3:7)
+| import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+| import Link from "next/link";
+> import Link from "next/link";
+| import Image from "next/image";
+| import { getStorePublicConfig } from "@/lib/store";
+
+Import trace for requested module:
+./src/components/store/store-footer.tsx
+./src/app/layout.tsx
+[browser] ./src/components/store/store-footer.tsx
+Module parse failed: Identifier 'Link' has already been declared (3:7)
+| import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+| import Link from "next/link";
+> import Link from "next/link";
+| import Image from "next/image";
+| import { getStorePublicConfig } from "@/lib/store"; 
+[browser] Uncaught ModuleParseError: Module parse failed: Identifier 'Link' has already been declared (3:7)
+File was processed with these loaders:
+ * ./node_modules/next/dist/build/webpack/loaders/next-flight-loader/index.js
+ * ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+You may need an additional loader to handle the result of these loaders.
+| import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+| import Link from "next/link";
+> import Link from "next/link";
+| import Image from "next/image";
+| import { getStorePublicConfig } from "@/lib/store";
+    at <unknown> (File was processed with these loaders:)
+    at <unknown> (File was processed with these loaders:)
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[browser] ./src/components/store/store-footer.tsx
+Module parse failed: Identifier 'Link' has already been declared (3:7)
+| import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+| import Link from "next/link";
+> import Link from "next/link";
+| import Image from "next/image";
+| import { getStorePublicConfig } from "@/lib/store";
+
+Import trace for requested module:
+./src/components/store/store-footer.tsx
+./src/app/layout.tsx 
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[browser] ./src/components/store/store-footer.tsx
+Module parse failed: Identifier 'Link' has already been declared (3:7)
+| import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+| import Link from "next/link";
+> import Link from "next/link";
+| import Image from "next/image";
+| import { getStorePublicConfig } from "@/lib/store";
+
+Import trace for requested module:
+./src/components/store/store-footer.tsx
+./src/app/layout.tsx 
+⨯ ./src/components/store/store-footer.tsx
+Module parse failed: Identifier 'Link' has already been declared (3:7)
+| import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+| import Link from "next/link";
+> import Link from "next/link";
+| import Image from "next/image";
+| import { getStorePublicConfig } from "@/lib/store";
+
+Import trace for requested module:
+./src/components/store/store-footer.tsx
+./src/app/layout.tsx
+[browser] Uncaught ModuleParseError: Module parse failed: Identifier 'Link' has already been declared (3:7)
+File was processed with these loaders:
+ * ./node_modules/next/dist/build/webpack/loaders/next-flight-loader/index.js
+ * ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+You may need an additional loader to handle the result of these loaders.
+| import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+| import Link from "next/link";
+> import Link from "next/link";
+| import Image from "next/image";
+| import { getStorePublicConfig } from "@/lib/store";
+    at <unknown> (File was processed with these loaders:)
+    at <unknown> (File was processed with these loaders:)
+[browser] ./src/components/store/store-footer.tsx
+Module parse failed: Identifier 'Link' has already been declared (3:7)
+| import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+| import Link from "next/link";
+> import Link from "next/link";
+| import Image from "next/image";
+| import { getStorePublicConfig } from "@/lib/store"; 
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⨯ ./src/components/store/store-footer.tsx
+Module parse failed: Identifier 'Link' has already been declared (3:7)
+| import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+| import Link from "next/link";
+> import Link from "next/link";
+| import Image from "next/image";
+| import { getStorePublicConfig } from "@/lib/store";
+
+Import trace for requested module:
+./src/components/store/store-footer.tsx
+./src/app/layout.tsx
+[browser] Uncaught ModuleParseError: Module parse failed: Identifier 'Link' has already been declared (3:7)
+File was processed with these loaders:
+ * ./node_modules/next/dist/build/webpack/loaders/next-flight-loader/index.js
+ * ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+You may need an additional loader to handle the result of these loaders.
+| import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+| import Link from "next/link";
+> import Link from "next/link";
+| import Image from "next/image";
+| import { getStorePublicConfig } from "@/lib/store";
+    at <unknown> (File was processed with these loaders:)
+    at <unknown> (File was processed with these loaders:)
+⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[browser] ./src/components/store/store-footer.tsx
+Module parse failed: Identifier 'Link' has already been declared (3:7)
+| import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+| import Link from "next/link";
+> import Link from "next/link";
+| import Image from "next/image";
+| import { getStorePublicConfig } from "@/lib/store"; 
+[browser] ./src/components/store/store-footer.tsx
+Module parse failed: Identifier 'Link' has already been declared (3:7)
+| import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+| import Link from "next/link";
+> import Link from "next/link";
+| import Image from "next/image";
+| import { getStorePublicConfig } from "@/lib/store";
+
+Import trace for requested module:
+./src/components/store/store-footer.tsx
+./src/app/layout.tsx 
+⨯ ./src/components/store/store-footer.tsx
+Module parse failed: Identifier 'Link' has already been declared (3:7)
+| import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+| import Link from "next/link";
+> import Link from "next/link";
+| import Image from "next/image";
+| import { getStorePublicConfig } from "@/lib/store";
+
+Import trace for requested module:
+./src/components/store/store-footer.tsx
+./src/app/layout.tsx
+[browser] Uncaught ModuleParseError: Module parse failed: Identifier 'Link' has already been declared (3:7)
+File was processed with these loaders:
+ * ./node_modules/next/dist/build/webpack/loaders/next-flight-loader/index.js
+ * ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+You may need an additional loader to handle the result of these loaders.
+| import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+| import Link from "next/link";
+> import Link from "next/link";
+| import Image from "next/image";
+| import { getStorePublicConfig } from "@/lib/store";
+    at <unknown> (File was processed with these loaders:)
+    at <unknown> (File was processed with these loaders:)
+⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[browser] ./src/components/store/store-footer.tsx
+Module parse failed: Identifier 'Link' has already been declared (3:7)
+| import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+| import Link from "next/link";
+> import Link from "next/link";
+| import Image from "next/image";
+| import { getStorePublicConfig } from "@/lib/store"; 
+[browser] ./src/components/store/store-footer.tsx
+Module parse failed: Identifier 'Link' has already been declared (3:7)
+| import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+| import Link from "next/link";
+> import Link from "next/link";
+| import Image from "next/image";
+| import { getStorePublicConfig } from "@/lib/store";
+
+Import trace for requested module:
+./src/components/store/store-footer.tsx
+./src/app/layout.tsx 
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[browser] ./src/components/store/store-footer.tsx
+Module parse failed: Identifier 'Link' has already been declared (3:7)
+| import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+| import Link from "next/link";
+> import Link from "next/link";
+| import Image from "next/image";
+| import { getStorePublicConfig } from "@/lib/store";
+
+Import trace for requested module:
+./src/components/store/store-footer.tsx
+./src/app/layout.tsx 
+⨯ ./src/components/store/store-footer.tsx
+Module parse failed: Identifier 'Link' has already been declared (3:7)
+| import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+| import Link from "next/link";
+> import Link from "next/link";
+| import Image from "next/image";
+| import { getStorePublicConfig } from "@/lib/store";
+
+Import trace for requested module:
+./src/components/store/store-footer.tsx
+./src/app/layout.tsx
+⨯ ./src/components/store/store-footer.tsx
+Module parse failed: Identifier 'Link' has already been declared (3:7)
+| import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+| import Link from "next/link";
+> import Link from "next/link";
+| import Image from "next/image";
+| import { getStorePublicConfig } from "@/lib/store";
+
+Import trace for requested module:
+./src/components/store/store-footer.tsx
+./src/app/layout.tsx
+⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⨯ ./src/components/store/store-footer.tsx
+Module parse failed: Identifier 'Link' has already been declared (3:7)
+| import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+| import Link from "next/link";
+> import Link from "next/link";
+| import Image from "next/image";
+| import { getStorePublicConfig } from "@/lib/store";
+
+Import trace for requested module:
+./src/components/store/store-footer.tsx
+./src/app/layout.tsx
+[browser] Uncaught ModuleParseError: Module parse failed: Identifier 'Link' has already been declared (3:7)
+File was processed with these loaders:
+ * ./node_modules/next/dist/build/webpack/loaders/next-flight-loader/index.js
+ * ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+You may need an additional loader to handle the result of these loaders.
+| import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+| import Link from "next/link";
+> import Link from "next/link";
+| import Image from "next/image";
+| import { getStorePublicConfig } from "@/lib/store";
+    at <unknown> (File was processed with these loaders:)
+    at <unknown> (File was processed with these loaders:)
+⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⨯ ./src/components/store/store-footer.tsx
+Module parse failed: Identifier 'Link' has already been declared (3:7)
+| import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+| import Link from "next/link";
+> import Link from "next/link";
+| import Image from "next/image";
+| import { getStorePublicConfig } from "@/lib/store";
+
+Import trace for requested module:
+./src/components/store/store-footer.tsx
+./src/app/layout.tsx
+[browser] Uncaught ModuleParseError: Module parse failed: Identifier 'Link' has already been declared (3:7)
+File was processed with these loaders:
+ * ./node_modules/next/dist/build/webpack/loaders/next-flight-loader/index.js
+ * ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+You may need an additional loader to handle the result of these loaders.
+| import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+| import Link from "next/link";
+> import Link from "next/link";
+| import Image from "next/image";
+| import { getStorePublicConfig } from "@/lib/store";
+    at <unknown> (File was processed with these loaders:)
+    at <unknown> (File was processed with these loaders:)
+⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\.next\dev\server\app\page.js'
+    at ignore-listed frames {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\.next\\dev\\server\\app\\page.js',
+  page: '/'
+}
+⨯ Error: Cannot find module 'C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\.next\dev\server\pages\_document.js'
+Require stack:
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\require.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\load-components.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\build\utils.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\lib\start-server.js
+    at ignore-listed frames {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\require.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\load-components.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\build\\utils.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\lib\\router-server.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\lib\\start-server.js'
+  ]
+}
+Error: ENOENT: no such file or directory, open 'C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\.next\dev\server\app\page.js'
+    at ignore-listed frames {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\.next\\dev\\server\\app\\page.js',
+  page: '/'
+}
+⨯ Error: Cannot find module 'C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\.next\dev\server\pages\_document.js'
+Require stack:
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\require.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\load-components.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\build\utils.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\lib\start-server.js
+    at ignore-listed frames {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\require.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\load-components.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\build\\utils.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\lib\\router-server.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\lib\\start-server.js'
+  ]
+}
+Error: ENOENT: no such file or directory, open 'C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\.next\dev\routes-manifest.json'
+    at ignore-listed frames {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\.next\\dev\\routes-manifest.json'
+}
+⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\.next\dev\server\app\page.js'
+    at ignore-listed frames {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\.next\\dev\\server\\app\\page.js',
+  page: '/'
+}
+⨯ Error: Cannot find module 'C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\.next\dev\server\pages\_document.js'
+Require stack:
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\require.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\load-components.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\build\utils.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\lib\start-server.js
+    at ignore-listed frames {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\require.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\load-components.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\build\\utils.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\lib\\router-server.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\lib\\start-server.js'
+  ]
+}
+Error: ENOENT: no such file or directory, open 'C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\.next\dev\server\app\page.js'
+    at ignore-listed frames {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\.next\\dev\\server\\app\\page.js',
+  page: '/'
+}
+⨯ Error: Cannot find module 'C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\.next\dev\server\pages\_document.js'
+Require stack:
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\require.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\load-components.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\build\utils.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\lib\start-server.js
+    at ignore-listed frames {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\require.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\load-components.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\build\\utils.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\lib\\router-server.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\lib\\start-server.js'
+  ]
+}
+Error: ENOENT: no such file or directory, open 'C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\.next\dev\routes-manifest.json'
+    at ignore-listed frames {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\.next\\dev\\routes-manifest.json'
+}
+⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\.next\dev\server\app\page.js'
+    at ignore-listed frames {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\.next\\dev\\server\\app\\page.js',
+  page: '/'
+}
+⨯ Error: Cannot find module 'C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\.next\dev\server\pages\_document.js'
+Require stack:
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\require.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\load-components.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\build\utils.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\lib\start-server.js
+    at ignore-listed frames {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\require.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\load-components.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\build\\utils.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\lib\\router-server.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\lib\\start-server.js'
+  ]
+}
+Error: ENOENT: no such file or directory, open 'C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\.next\dev\server\app\page.js'
+    at ignore-listed frames {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\.next\\dev\\server\\app\\page.js',
+  page: '/'
+}
+⨯ Error: Cannot find module 'C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\.next\dev\server\pages\_document.js'
+Require stack:
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\require.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\load-components.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\build\utils.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\lib\start-server.js
+    at ignore-listed frames {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\require.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\load-components.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\build\\utils.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\lib\\router-server.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\lib\\start-server.js'
+  ]
+}
+Error: ENOENT: no such file or directory, open 'C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\.next\dev\routes-manifest.json'
+    at ignore-listed frames {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\.next\\dev\\routes-manifest.json'
+}
+⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\.next\dev\server\app\page.js'
+    at ignore-listed frames {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\.next\\dev\\server\\app\\page.js',
+  page: '/'
+}
+⨯ Error: Cannot find module 'C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\.next\dev\server\pages\_document.js'
+Require stack:
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\require.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\load-components.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\build\utils.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\lib\start-server.js
+    at ignore-listed frames {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\require.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\load-components.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\build\\utils.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\lib\\router-server.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\lib\\start-server.js'
+  ]
+}
+Error: ENOENT: no such file or directory, open 'C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\.next\dev\server\app\page.js'
+    at ignore-listed frames {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\.next\\dev\\server\\app\\page.js',
+  page: '/'
+}
+⨯ Error: Cannot find module 'C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\.next\dev\server\pages\_document.js'
+Require stack:
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\require.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\load-components.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\build\utils.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\lib\start-server.js
+    at ignore-listed frames {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\require.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\load-components.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\build\\utils.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\lib\\router-server.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\lib\\start-server.js'
+  ]
+}
+Error: ENOENT: no such file or directory, open 'C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\.next\dev\routes-manifest.json'
+    at ignore-listed frames {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\.next\\dev\\routes-manifest.json'
+}
+⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\.next\dev\server\app\page.js'
+    at ignore-listed frames {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\.next\\dev\\server\\app\\page.js',
+  page: '/'
+}
+⨯ Error: Cannot find module 'C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\.next\dev\server\pages\_document.js'
+Require stack:
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\require.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\load-components.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\build\utils.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\lib\start-server.js
+    at ignore-listed frames {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\require.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\load-components.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\build\\utils.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\lib\\router-server.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\lib\\start-server.js'
+  ]
+}
+Error: ENOENT: no such file or directory, open 'C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\.next\dev\server\app\page.js'
+    at ignore-listed frames {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\.next\\dev\\server\\app\\page.js',
+  page: '/'
+}
+⨯ Error: Cannot find module 'C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\.next\dev\server\pages\_document.js'
+Require stack:
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\require.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\load-components.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\build\utils.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\lib\start-server.js
+    at ignore-listed frames {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\require.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\load-components.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\build\\utils.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\lib\\router-server.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\lib\\start-server.js'
+  ]
+}
+Error: ENOENT: no such file or directory, open 'C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\.next\dev\routes-manifest.json'
+    at ignore-listed frames {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\.next\\dev\\routes-manifest.json'
+}
+⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\.next\dev\server\app\page.js'
+    at ignore-listed frames {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\.next\\dev\\server\\app\\page.js',
+  page: '/'
+}
+⨯ Error: Cannot find module 'C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\.next\dev\server\pages\_document.js'
+Require stack:
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\require.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\load-components.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\build\utils.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\lib\start-server.js
+    at ignore-listed frames {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\require.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\load-components.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\build\\utils.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\lib\\router-server.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\lib\\start-server.js'
+  ]
+}
+Error: ENOENT: no such file or directory, open 'C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\.next\dev\server\app\page.js'
+    at ignore-listed frames {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\.next\\dev\\server\\app\\page.js',
+  page: '/'
+}
+⨯ Error: Cannot find module 'C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\.next\dev\server\pages\_document.js'
+Require stack:
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\require.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\load-components.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\build\utils.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\node_modules\next\dist\server\lib\start-server.js
+    at ignore-listed frames {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\require.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\load-components.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\build\\utils.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\lib\\router-server.js',
+    'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\node_modules\\next\\dist\\server\\lib\\start-server.js'
+  ]
+}
+Error: ENOENT: no such file or directory, open 'C:\Users\Helen\OneDrive\Desktop\marquinhos motos\site\.next\dev\routes-manifest.json'
+    at ignore-listed frames {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Helen\\OneDrive\\Desktop\\marquinhos motos\\site\\.next\\dev\\routes-manifest.json'
+}

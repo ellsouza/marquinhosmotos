@@ -1,0 +1,17 @@
+services:
+  db:
+    image: postgres:16
+    container_name: marquinhos-motos-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: marquinhos_motos
+    ports:
+      - "5432:5432"
+    volumes:
+      - marquinhos_motos_db:/var/lib/postgresql/data
+
+volumes:
+  marquinhos_motos_db:
+
