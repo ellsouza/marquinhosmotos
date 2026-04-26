@@ -13,6 +13,7 @@ export function StoreInfo() {
     mapQuery,
   )}`;
   const phoneHref = `tel:${store.phone.replaceAll(/[^\d+]/g, "")}`;
+  const reviewsUrl = store.googleReviewsUrl || mapsUrl;
 
   return (
     <div className="grid gap-6 md:grid-cols-2">
@@ -40,19 +41,18 @@ export function StoreInfo() {
           </div>
 
           <div className="rounded-2xl border border-black/10 bg-zinc-50 p-4">
-            <div className="text-sm font-semibold">Mapa de {store.name}</div>
+            <div className="text-sm font-semibold">Google — {store.name}</div>
             <div className="mt-1 text-sm text-black/70">
-              {store.googleRating} — {store.googleReviewsCount} avaliações no
-              Google
+              {store.googleRating} — {store.googleReviewsCount} avaliações
             </div>
             <div className="mt-4 flex flex-wrap gap-2">
               <a
-                href={mapsUrl}
+                href={reviewsUrl}
                 target="_blank"
                 rel="noreferrer"
                 className="mm-btn mm-btn-primary"
               >
-                Ver fotos
+                Ver avaliações
               </a>
               <a
                 href={mapsUrl}
@@ -60,7 +60,7 @@ export function StoreInfo() {
                 rel="noreferrer"
                 className="mm-btn mm-btn-primary"
               >
-                Ver por fora
+                Ver fotos reais
               </a>
               <a
                 href={directionsUrl}
@@ -70,10 +70,7 @@ export function StoreInfo() {
               >
                 Rotas
               </a>
-              <a
-                href={phoneHref}
-                className="mm-btn mm-btn-primary"
-              >
+              <a href={phoneHref} className="mm-btn mm-btn-primary">
                 Ligar
               </a>
             </div>
@@ -87,3 +84,4 @@ export function StoreInfo() {
     </div>
   );
 }
+

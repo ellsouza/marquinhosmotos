@@ -1,7 +1,15 @@
 export function getStorePublicConfig() {
+  const city = process.env.NEXT_PUBLIC_STORE_CITY ?? "Barueri";
+  const state = process.env.NEXT_PUBLIC_STORE_STATE ?? "SP";
+
   return {
     siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
     name: process.env.NEXT_PUBLIC_STORE_NAME ?? "Marquinhos Motos Mecânica Geral",
+    city,
+    state,
+    heroHeadline:
+      process.env.NEXT_PUBLIC_HERO_HEADLINE ??
+      `Peças e serviços para motos — atendimento rápido em ${city}/${state}`,
     whatsAppE164: process.env.NEXT_PUBLIC_WHATSAPP_E164 ?? "5511999999999",
     whatsAppDefaultMessage:
       process.env.NEXT_PUBLIC_WHATSAPP_DEFAULT_MESSAGE ??
@@ -24,4 +32,3 @@ export function getStorePublicConfig() {
       "https://www.instagram.com/marquinhosmotosbarueri/",
   };
 }
-

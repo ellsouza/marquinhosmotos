@@ -4,6 +4,7 @@ import { StoreBadge } from "@/components/store/store-badge";
 import { WhatsAppCta } from "@/components/store/whatsapp-cta";
 import { SocialProof } from "@/components/store/social-proof";
 import { listProducts } from "@/lib/catalog";
+import { getStorePublicConfig } from "@/lib/store";
 import { formatBRL } from "@/lib/money";
 import elements from "../public/img/elements.png";
 import cartaovisita from "../public/img/cartaovisita.png";
@@ -11,6 +12,7 @@ import sitebg from "../public/img/sitebg.png";
 import servicos from "../public/img/servicos.png";
 
 export default async function Home() {
+  const store = getStorePublicConfig();
   const { products } = await listProducts();
   const featured = products.slice(0, 6);
 
@@ -46,7 +48,7 @@ export default async function Home() {
             <div className="space-y-5">
               <StoreBadge />
               <h1 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl md:text-4xl">
-                Peças e serviços para motos — atendimento rápido em Barueri/SP
+                {store.heroHeadline}
               </h1>
               <p className="text-sm leading-relaxed text-white/85">
                 Clique em <span className="font-semibold">Solicitar orçamento</span>{" "}
@@ -232,4 +234,3 @@ export default async function Home() {
     </div>
   );
 }
-

@@ -20,19 +20,38 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Marquinhos Motos Barueri",
-  description: "Loja online e loja física em Barueri/SP.",
-  icons: {
-    icon: [
-      { url: "/img/favicon-32.png", type: "image/png", sizes: "32x32" },
-      { url: "/img/favicon-192.png", type: "image/png", sizes: "192x192" },
-      { url: "/img/favicon-512.png", type: "image/png", sizes: "512x512" },
-    ],
-    shortcut: [{ url: "/img/favicon-32.png", type: "image/png" }],
-    apple: [{ url: "/img/favicon-192.png", type: "image/png" }],
-  },
-};
+export function generateMetadata(): Metadata {
+  const store = getStorePublicConfig();
+  const title = `${store.name} — ${store.city}/${store.state}`;
+  const description = `Peças e serviços para motos com atendimento rápido em ${store.city}/${store.state}. Solicite orçamento no WhatsApp.`;
+
+  return {
+    metadataBase: new URL(store.siteUrl),
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: store.siteUrl,
+      type: "website",
+      locale: "pt_BR",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
+    icons: {
+      icon: [
+        { url: "/img/favicon-32.png", type: "image/png", sizes: "32x32" },
+        { url: "/img/favicon-192.png", type: "image/png", sizes: "192x192" },
+        { url: "/img/favicon-512.png", type: "image/png", sizes: "512x512" },
+      ],
+      shortcut: [{ url: "/img/favicon-32.png", type: "image/png" }],
+      apple: [{ url: "/img/favicon-192.png", type: "image/png" }],
+    },
+  };
+}
 
 export default function RootLayout({
   children,

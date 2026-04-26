@@ -17,7 +17,12 @@ type Order = {
   status: "PENDING" | "PAID" | "CANCELED";
   totalCents: number;
   createdAt: string;
-  items: { id: string; quantity: number; unitPriceCents: number; nameSnapshot: string }[];
+  items: {
+    id: string;
+    quantity: number;
+    unitPriceCents: number;
+    nameSnapshot: string;
+  }[];
 };
 
 export default function ContaPage() {
@@ -25,7 +30,12 @@ export default function ContaPage() {
   const [mode, setMode] = useState<"login" | "register">("login");
   const [loading, setLoading] = useState(true);
   const [orders, setOrders] = useState<Order[]>([]);
-  const [form, setForm] = useState({ email: "", password: "", name: "", phone: "" });
+  const [form, setForm] = useState({
+    email: "",
+    password: "",
+    name: "",
+    phone: "",
+  });
 
   const title = useMemo(
     () => (user ? `Olá${user.name ? `, ${user.name}` : ""}` : "Sua conta"),
@@ -66,7 +76,12 @@ export default function ContaPage() {
     const payload =
       mode === "login"
         ? { email: form.email, password: form.password }
-        : { email: form.email, password: form.password, name: form.name, phone: form.phone };
+        : {
+            email: form.email,
+            password: form.password,
+            name: form.name,
+            phone: form.phone,
+          };
 
     const res = await fetch(endpoint, {
       method: "POST",
@@ -86,7 +101,7 @@ export default function ContaPage() {
     await refresh();
   }
 
-  if (loading) return <div className="text-sm text-black/70">Carregando…</div>;
+  if (loading) return <div className="text-sm text-black/70">Carregando...</div>;
 
   if (!user) {
     return (
@@ -179,11 +194,7 @@ export default function ContaPage() {
           <h1 className="text-2xl font-semibold tracking-tight">{title}</h1>
           <div className="text-sm text-black/70">{user.email}</div>
         </div>
-        <button
-          type="button"
-          onClick={() => logout().catch(() => {})}
-          className="mm-btn mm-btn-ghost"
-        >
+        <button type="button" onClick={() => logout().catch(() => {})} className="mm-btn mm-btn-ghost">
           Sair
         </button>
       </div>
@@ -218,3 +229,4 @@ export default function ContaPage() {
     </div>
   );
 }
+

@@ -45,24 +45,18 @@ export default async function ProdutoDetalhePage({
             href="/produtos"
             className="text-sm text-black/70 underline underline-offset-4 hover:text-black"
           >
-            ← Voltar para itens
+            ← Voltar para peças
           </Link>
           <WhatsAppCta label="Tirar dúvidas no WhatsApp" />
         </div>
 
         <div className="space-y-2">
-          <h1 className="text-2xl font-semibold tracking-tight">
-            {product.name}
-          </h1>
-          <div className="text-base text-black/70">
-            {formatBRL(product.priceCents)}
-          </div>
+          <h1 className="text-2xl font-semibold tracking-tight">{product.name}</h1>
+          <div className="text-base text-black/70">{formatBRL(product.priceCents)}</div>
         </div>
 
         {product.description ? (
-          <p className="text-sm leading-relaxed text-black/70">
-            {product.description}
-          </p>
+          <p className="text-sm leading-relaxed text-black/70">{product.description}</p>
         ) : null}
 
         <div className="space-y-3">
@@ -88,3 +82,4 @@ export default async function ProdutoDetalhePage({
     </div>
   );
 }
+

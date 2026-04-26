@@ -36,7 +36,7 @@ export default function CarrinhoPage() {
         window.location.href = data.url;
         return;
       }
-      alert("NÃ£o foi possÃ­vel iniciar o checkout.");
+      alert("Não foi possível iniciar o checkout.");
     } finally {
       setLoading(false);
     }
@@ -46,9 +46,9 @@ export default function CarrinhoPage() {
     return (
       <div className="mx-auto max-w-xl space-y-4">
         <h1 className="text-2xl font-semibold tracking-tight">Carrinho</h1>
-        <p className="text-sm text-black/70">Seu carrinho estÃ¡ vazio.</p>
+        <p className="text-sm text-black/70">Seu carrinho está vazio.</p>
         <Link href="/produtos" className="mm-btn mm-btn-primary w-fit">
-          Ver itens
+          Ver peças
         </Link>
       </div>
     );
@@ -56,22 +56,29 @@ export default function CarrinhoPage() {
 
   return (
     <div className="space-y-6">
-        <div className="flex flex-wrap items-end justify-between gap-3">
-          <div>
-            <h1 className="text-2xl font-semibold tracking-tight">Carrinho</h1>
-            <p className="text-sm text-black/70">
-              Revise seus itens e finalize pelo Stripe ou WhatsApp.
-            </p>
-          </div>
-          <button type="button" onClick={() => cart.clear()} className="mm-btn mm-btn-ghost">
-            Limpar
-          </button>
+      <div className="flex flex-wrap items-end justify-between gap-3">
+        <div>
+          <h1 className="text-2xl font-semibold tracking-tight">Carrinho</h1>
+          <p className="text-sm text-black/70">
+            Revise seus itens e finalize pelo Stripe ou WhatsApp.
+          </p>
         </div>
+        <button
+          type="button"
+          onClick={() => cart.clear()}
+          className="mm-btn mm-btn-ghost"
+        >
+          Limpar
+        </button>
+      </div>
 
       <div className="grid gap-6 lg:grid-cols-3">
         <div className="space-y-3 lg:col-span-2">
           {cart.items.map((i) => (
-            <div key={i.productId} className="flex gap-4 rounded-2xl border border-black/10 bg-white p-4">
+            <div
+              key={i.productId}
+              className="flex gap-4 rounded-2xl border border-black/10 bg-white p-4"
+            >
               <div className="relative h-20 w-24 overflow-hidden rounded-xl bg-zinc-100">
                 {i.imageUrl ? (
                   <Image src={i.imageUrl} alt={i.name} fill className="object-cover" />
@@ -136,13 +143,15 @@ export default function CarrinhoPage() {
             onClick={() => checkout().catch(() => {})}
             className="mm-btn mm-btn-primary w-full disabled:opacity-60"
           >
-            {loading ? "Processandoâ€¦" : "Finalizar compra"}
+            {loading ? "Processando..." : "Finalizar compra"}
           </button>
           <p className="text-xs text-black/60">
-            Se o Stripe nÃ£o estiver configurado, o checkout abre o WhatsApp com o pedido pronto.
+            Se o Stripe não estiver configurado, o checkout abre o WhatsApp com o pedido
+            pronto.
           </p>
         </div>
       </div>
     </div>
   );
 }
+

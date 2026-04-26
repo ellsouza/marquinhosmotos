@@ -36,6 +36,7 @@ export function StoreFooter() {
     mapQuery,
   )}`;
   const phoneHref = `tel:${store.phone.replaceAll(/[^\d+]/g, "")}`;
+  const reviewsUrl = store.googleReviewsUrl || mapsUrl;
   const year = new Date().getFullYear();
 
   return (
@@ -85,18 +86,15 @@ export function StoreFooter() {
               </div>
 
               <div className="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap">
-                <FooterActionLink href={mapsUrl} label="Ver fotos" />
-                <FooterActionLink href={mapsUrl} label="Ver por fora" />
+                <FooterActionLink href={mapsUrl} label="Ver fotos reais" />
+                <FooterActionLink href={reviewsUrl} label="Avaliações" />
                 <FooterActionLink href={directionsUrl} label="Rotas" />
                 <FooterActionLink
                   href={phoneHref}
                   label="Ligar"
                   icon={<PhoneIcon className="h-4 w-4 text-black" />}
                 />
-                <WhatsAppCta
-                  label="WhatsApp"
-                  className="col-span-2 w-full sm:w-auto"
-                />
+                <WhatsAppCta label="WhatsApp" className="col-span-2 w-full sm:w-auto" />
               </div>
             </div>
           </div>
@@ -106,7 +104,10 @@ export function StoreFooter() {
               <div className="font-semibold">Links</div>
               <div className="grid grid-cols-2 gap-2 text-white/80">
                 <Link href="/produtos" className="hover:text-white hover:underline">
-                  Itens
+                  Peças
+                </Link>
+                <Link href="/servicos" className="hover:text-white hover:underline">
+                  Serviços
                 </Link>
                 <Link href="/loja" className="hover:text-white hover:underline">
                   Loja física
@@ -116,6 +117,9 @@ export function StoreFooter() {
                 </Link>
                 <Link href="/conta" className="hover:text-white hover:underline">
                   Conta
+                </Link>
+                <Link href="/portfolio" className="hover:text-white hover:underline">
+                  Case IA
                 </Link>
                 <a
                   href={store.instagramUrl}
@@ -141,11 +145,10 @@ export function StoreFooter() {
             <div className="space-y-4 text-sm">
               <div className="font-semibold">Mapa de {store.name}</div>
               <div className="text-white/80">
-                {store.googleRating} — {store.googleReviewsCount} avaliações no
-                Google
+                {store.googleRating} — {store.googleReviewsCount} avaliações no Google
               </div>
               <div className="flex flex-wrap gap-2">
-                <FooterActionLink href={mapsUrl} label="Avaliações" />
+                <FooterActionLink href={reviewsUrl} label="Avaliações" />
                 <FooterActionLink href={directionsUrl} label="Rotas" />
               </div>
               <a
@@ -170,3 +173,4 @@ export function StoreFooter() {
     </footer>
   );
 }
+
