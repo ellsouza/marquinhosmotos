@@ -36,26 +36,22 @@ export function PhoneIcon({ className }: { className?: string }) {
 
 export function WhatsAppIcon({ className }: { className?: string }) {
   return (
-    <svg
-      viewBox="0 0 24 24"
+    <span
       aria-hidden="true"
       className={className ?? "h-5 w-5"}
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      preserveAspectRatio="xMidYMid meet"
-    >
-      <path
-        vectorEffect="non-scaling-stroke"
-        d="M12 3a8.5 8.5 0 0 0-7.3 12.8L3 21l5.4-1.6A8.5 8.5 0 1 0 12 3z"
-      />
-      <path
-        vectorEffect="non-scaling-stroke"
-        d="M10 8.8c.2-.5.6-.6.9-.6h.6c.3 0 .6.1.7.4l.9 2c.1.3 0 .6-.2.8l-.7.7c.8 1.4 1.9 2.6 3.3 3.3l.7-.7c.2-.2.5-.3.8-.2l2 .9c.3.1.4.4.4.7v.6c0 .3-.1.7-.6.9-.6.3-1.8.6-3.7-.3-2.4-1.1-4.4-3.2-5.5-5.5-.9-2-.6-3.2-.3-3.7z"
-      />
-    </svg>
+      style={{
+        display: "inline-block",
+        backgroundColor: "currentColor",
+        WebkitMaskImage: "url(/img/whatsapp_icon_no_bg.png)",
+        maskImage: "url(/img/whatsapp_icon_no_bg.png)",
+        WebkitMaskRepeat: "no-repeat",
+        maskRepeat: "no-repeat",
+        WebkitMaskPosition: "center",
+        maskPosition: "center",
+        WebkitMaskSize: "contain",
+        maskSize: "contain",
+      }}
+    />
   );
 }
 
