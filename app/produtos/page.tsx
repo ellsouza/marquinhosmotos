@@ -29,6 +29,8 @@ export default async function ProdutosPage({
     page,
     pageSize: 18,
   });
+  const formatPrice = (priceCents: number) =>
+    priceCents > 0 ? formatBRL(priceCents) : "—";
 
   const baseParams = new URLSearchParams();
   if (selectedCategory) baseParams.set("category", selectedCategory);
@@ -138,7 +140,7 @@ export default async function ProdutosPage({
               <div className="space-y-3 p-4">
                 <div className="space-y-1">
                   <div className="line-clamp-2 text-sm font-semibold">{p.name}</div>
-                  <div className="text-sm text-black/70">{formatBRL(p.priceCents)}</div>
+                  <div className="text-sm text-black/70">{formatPrice(p.priceCents)}</div>
                 </div>
                 <AddToCartButton
                   product={{
@@ -163,4 +165,3 @@ export default async function ProdutosPage({
     </div>
   );
 }
-

@@ -23,6 +23,8 @@ export default async function ProdutoDetalhePage({
     );
   }
 
+  const priceLabel = product.priceCents > 0 ? formatBRL(product.priceCents) : "—";
+
   return (
     <div className="grid gap-8 md:grid-cols-2">
       <div className="overflow-hidden rounded-2xl border border-black/10 bg-zinc-100 shadow-sm">
@@ -52,7 +54,7 @@ export default async function ProdutoDetalhePage({
 
         <div className="space-y-2">
           <h1 className="text-2xl font-semibold tracking-tight">{product.name}</h1>
-          <div className="text-base text-black/70">{formatBRL(product.priceCents)}</div>
+          <div className="text-base text-black/70">{priceLabel}</div>
         </div>
 
         {product.description ? (
@@ -82,4 +84,3 @@ export default async function ProdutoDetalhePage({
     </div>
   );
 }
-

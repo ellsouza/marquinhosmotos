@@ -16,6 +16,8 @@ export default async function Home() {
   const store = getStorePublicConfig();
   const { products } = await listProducts();
   const featured = products.slice(0, 6);
+  const formatPrice = (priceCents: number) =>
+    priceCents > 0 ? formatBRL(priceCents) : "—";
 
   return (
     <div className="space-y-10">
@@ -227,7 +229,7 @@ export default async function Home() {
                   {p.name}
                 </div>
                 <div className="text-sm text-black/70">
-                  {formatBRL(p.priceCents)}
+                  {formatPrice(p.priceCents)}
                 </div>
               </div>
             </Link>
