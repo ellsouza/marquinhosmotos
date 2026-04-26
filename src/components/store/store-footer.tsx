@@ -119,7 +119,7 @@ export function StoreFooter() {
                   Conta
                 </Link>
                 <Link href="/portfolio" className="hover:text-white hover:underline">
-                  Case IA
+                  Case
                 </Link>
                 <a
                   href={store.instagramUrl}
@@ -173,4 +173,3 @@ export function StoreFooter() {
     </footer>
   );
 }
-

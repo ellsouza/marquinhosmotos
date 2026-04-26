@@ -1,7 +1,9 @@
 # Marquinhos Motos (site)
 
+Este projeto foi inspirado em uma loja real (dos meus tios) e feito com autorização.
+
 MVP de e-commerce com:
-- Catálogo por categorias (abas)
+- Catálogo por categorias
 - Carrinho
 - Checkout (Stripe) com fallback para pedido via WhatsApp
 - Cadastro/Login (sessão via cookie JWT) e página “Conta” com pedidos
@@ -11,7 +13,6 @@ MVP de e-commerce com:
 
 - Produção (Vercel): `https://marquinhosmotos-qus9.vercel.app/`
 - Case (Prompt Engineering): `PORTFOLIO_PROMPT_ENGINEERING.md` (e página `/portfolio`)
-- Feature IA (gerar descrição): `/ai/descricao` (precisa `OPENAI_API_KEY` para IA real; sem isso usa fallback)
 
 ## Rodar localmente
 

@@ -10,6 +10,9 @@ export function getStorePublicConfig() {
     heroHeadline:
       process.env.NEXT_PUBLIC_HERO_HEADLINE ??
       `Peças e serviços para motos — atendimento rápido em ${city}/${state}`,
+    realStoreNote:
+      process.env.NEXT_PUBLIC_REAL_STORE_NOTE ??
+      "Loja real (dos meus tios). Este projeto foi inspirado na loja e feito com autorização.",
     whatsAppE164: process.env.NEXT_PUBLIC_WHATSAPP_E164 ?? "5511999999999",
     whatsAppDefaultMessage:
       process.env.NEXT_PUBLIC_WHATSAPP_DEFAULT_MESSAGE ??

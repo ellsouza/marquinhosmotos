@@ -61,7 +61,7 @@ export function HeaderNav({
             className="mm-navlink"
             aria-current={ariaCurrent("/portfolio")}
           >
-            Case IA
+            Case
           </Link>
           <Link
             href="/loja"
@@ -190,7 +190,7 @@ export function HeaderNav({
                   className="mm-navlink w-full justify-start"
                   aria-current={ariaCurrent("/portfolio")}
                 >
-                  Case IA
+                  Case
                 </Link>
                 <Link
                   href="/loja"

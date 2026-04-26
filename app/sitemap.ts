@@ -15,7 +15,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${baseUrl}/servicos/mecanica-geral`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/loja`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/portfolio`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${baseUrl}/ai/descricao`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
   ];
 
   const productUrls: MetadataRoute.Sitemap = [];
