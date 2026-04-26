@@ -7,6 +7,10 @@ MVP de e-commerce com:
 - Cadastro/Login (sessão via cookie JWT) e página “Conta” com pedidos
 - Página da loja física (endereço + mapa)
 
+## Links
+
+- Produção (Vercel): `https://marquinhosmotos-qus9.vercel.app/`
+
 ## Rodar localmente
 
 1) Crie um arquivo `.env` baseado em `.env.example` e preencha:
@@ -14,6 +18,7 @@ MVP de e-commerce com:
 - `AUTH_SECRET` (string longa e aleatória)
 - `MM_JWT_ISSUER` e `MM_JWT_AUDIENCE` (opcional; ajuda a endurecer o JWT)
 - `NEXT_PUBLIC_*` (nome, WhatsApp, endereço, Instagram)
+- `NEXT_PUBLIC_SITE_URL` (URL base do site; em produção deve ser a URL do Vercel)
 
 2) Instale e gere o Prisma Client:
 
@@ -35,7 +40,7 @@ npm run db:seed
 npm run dev
 ```
 
-Abra `http://localhost:3000`.
+Abra `http://localhost:3000` (ou a porta exibida no terminal).
 
 ## Produtos / conteúdo
 
@@ -44,5 +49,5 @@ Abra `http://localhost:3000`.
 
 ## Checkout
 
-- Para checkout real por cartão: configure `STRIPE_SECRET_KEY` e `STRIPE_WEBHOOK_SECRET` no `.env`.
+- Para checkout real por cartão: configure `STRIPE_SECRET_KEY` no `.env`.
 - Sem Stripe configurado, o botão “Finalizar compra” redireciona para o WhatsApp com o pedido pré-preenchido.
