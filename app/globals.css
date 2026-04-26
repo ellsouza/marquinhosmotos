@@ -1,0 +1,208 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+.mm-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  border-radius: 0.85rem;
+  padding: 0.6rem 0.95rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1;
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease, transform 160ms ease;
+  user-select: none;
+}
+
+.mm-btn:active {
+  transform: translateY(1px);
+}
+
+.mm-btn-primary {
+  background: #ffcc00;
+  color: #0a0a0a;
+}
+
+.mm-btn-primary:hover {
+  background: #ffd84d;
+}
+
+.mm-btn-ghost-light {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+}
+
+.mm-btn-ghost-light:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.26);
+  color: #ffffff;
+}
+
+.mm-btn-outline-dark {
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  background: #ffffff;
+  color: #0a0a0a;
+}
+
+.mm-btn-outline-dark:hover {
+  background: rgba(255, 204, 0, 0.14);
+  border-color: rgba(0, 0, 0, 0.18);
+}
+
+.mm-navlink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.85rem;
+  padding: 0.55rem 0.9rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(8px);
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+
+.mm-navlink:hover {
+  background: rgba(255, 204, 0, 0.16);
+  border-color: rgba(255, 204, 0, 0.35);
+  color: #ffffff;
+}
+
+.mm-iconbtn {
+  width: 2.65rem;
+  height: 2.65rem;
+  padding: 0;
+}
+
+.mm-iconbtn svg {
+  display: block;
+}
+
+.banner-diagonais {
+  background: repeating-linear-gradient(
+    45deg,
+    #ffcc00,
+    #ffcc00 40px,
+    #000000 40px,
+    #000000 80px
+  );
+  box-shadow:
+    inset 0 10px 15px -5px rgba(0, 0, 0, 0.5),
+    inset 0 -10px 15px -5px rgba(0, 0, 0, 0.5),
+    0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.banner-diagonais--fixed {
+  width: 100%;
+  height: 200px;
+  border: none;
+  margin: 0;
+}
+
+.banner-diagonais--fill {
+  width: 100%;
+  height: 100%;
+}
+
+.xadrez-diagonal {
+  background-color: #ffcc00;
+  background-image:
+    linear-gradient(
+      45deg,
+      #000 25%,
+      transparent 25%,
+      transparent 75%,
+      #000 75%,
+      #000
+    ),
+    linear-gradient(
+      45deg,
+      #000 25%,
+      transparent 25%,
+      transparent 75%,
+      #000 75%,
+      #000
+    );
+  background-size: 133px 133px;
+  background-position: 0 0, 66.5px 66.5px;
+  box-shadow:
+    inset 0 8px 15px rgba(0, 0, 0, 0.4),
+    inset 0 -8px 15px rgba(0, 0, 0, 0.4);
+}
+
+.xadrez-diagonal-italico {
+  transform: skewX(14deg) scale(1.06);
+  transform-origin: center;
+}
+
+.xadrez-diagonal--tight {
+  background-size: 92px 92px;
+  background-position: 0 0, 46px 46px;
+}
+
+.header-pattern {
+  filter: brightness(0.9) contrast(1.08) saturate(1.05);
+  box-shadow:
+    inset 0 14px 20px rgba(0, 0, 0, 0.55),
+    inset 0 -14px 20px rgba(0, 0, 0, 0.55);
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0px,
+    #000 22px,
+    #000 calc(100% - 22px),
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0px,
+    #000 22px,
+    #000 calc(100% - 22px),
+    transparent 100%
+  );
+}
+
+.header-logo {
+  filter:
+    drop-shadow(0 14px 22px rgba(0, 0, 0, 0.75))
+    drop-shadow(0 0 14px rgba(255, 204, 0, 0.28));
+}
+
+.header-logo--bigger {
+  height: 6.75rem;
+}
+
+@media (min-width: 640px) {
+  .header-logo--bigger {
+    height: 9.25rem;
+  }
+}

@@ -1,0 +1,188 @@
+import { withTimeout } from "@/lib/timeout";
+import { demoCategories, demoProducts } from "@/lib/demo-data";
+
+export type CatalogCategory = { id: string; slug: string; name: string };
+export type CatalogProduct = {
+  id: string;
+  slug: string;
+  name: string;
+  description: string | null;
+  priceCents: number;
+  categorySlug: string;
+  imageUrl: string | null;
+};
+
+export async function listCategories(): Promise<{
+  categories: CatalogCategory[];
+  source: "demo" | "db";
+}> {
+  if (process.env.MM_ENABLE_DB !== "1") {
+    return { categories: demoCategories, source: "demo" };
+  }
+  try {
+    const { prisma } = await import("@/lib/db");
+    const categories = await withTimeout(
+      prisma.category.findMany({
+        orderBy: { name: "asc" },
+        select: { id: true, slug: true, name: true },
+      }),
+      1500,
+    );
+    return { categories, source: "db" };
+  } catch {
+    return { categories: demoCategories, source: "demo" };
+  }
+}
+
+export async function listProducts(input?: {
+  categorySlug?: string | null;
+}): Promise<{ products: CatalogProduct[]; source: "demo" | "db" }> {
+  const categorySlug = input?.categorySlug ?? null;
+  if (process.env.MM_ENABLE_DB !== "1") {
+    const products = categorySlug
+      ? demoProducts.filter((p) => p.categorySlug === categorySlug)
+      : demoProducts;
+    return {
+      products: products.map((p) => ({
+        id: p.id,
+        slug: p.slug,
+        name: p.name,
+        description: p.description,
+        priceCents: p.priceCents,
+        categorySlug: p.categorySlug,
+        imageUrl: p.imageUrl,
+      })),
+      source: "demo",
+    };
+  }
+
+  try {
+    const { prisma } = await import("@/lib/db");
+    const products = await withTimeout(
+      prisma.product.findMany({
+        where: {
+          isActive: true,
+          ...(categorySlug ? { category: { slug: categorySlug } } : {}),
+        },
+        orderBy: { createdAt: "desc" },
+        select: {
+          id: true,
+          slug: true,
+          name: true,
+          description: true,
+          priceCents: true,
+          category: { select: { slug: true } },
+          images: {
+            orderBy: { sort: "asc" },
+            take: 1,
+            select: { url: true },
+          },
+        },
+      }),
+      1500,
+    );
+
+    return {
+      products: products.map((p) => ({
+        id: p.id,
+        slug: p.slug,
+        name: p.name,
+        description: p.description,
+        priceCents: p.priceCents,
+        imageUrl: p.images[0]?.url ?? null,
+        categorySlug: p.category.slug,
+      })),
+      source: "db",
+    };
+  } catch {
+    return {
+      products: demoProducts.map((p) => ({
+        id: p.id,
+        slug: p.slug,
+        name: p.name,
+        description: p.description,
+        priceCents: p.priceCents,
+        categorySlug: p.categorySlug,
+        imageUrl: p.imageUrl,
+      })),
+      source: "demo",
+    };
+  }
+}
+
+export async function getProductBySlug(slug: string): Promise<{
+  product: CatalogProduct | null;
+  source: "demo" | "db";
+}> {
+  if (process.env.MM_ENABLE_DB !== "1") {
+    const demo = demoProducts.find((p) => p.slug === slug) ?? null;
+    return {
+      product: demo
+        ? {
+            id: demo.id,
+            slug: demo.slug,
+            name: demo.name,
+            description: demo.description,
+            priceCents: demo.priceCents,
+            categorySlug: demo.categorySlug,
+            imageUrl: demo.imageUrl,
+          }
+        : null,
+      source: "demo",
+    };
+  }
+
+  try {
+    const { prisma } = await import("@/lib/db");
+    const product = await withTimeout(
+      prisma.product.findUnique({
+        where: { slug },
+        select: {
+          id: true,
+          slug: true,
+          name: true,
+          description: true,
+          priceCents: true,
+          category: { select: { slug: true } },
+          images: {
+            orderBy: { sort: "asc" },
+            take: 1,
+            select: { url: true },
+          },
+        },
+      }),
+      1500,
+    );
+
+    return {
+      product: product
+        ? {
+            id: product.id,
+            slug: product.slug,
+            name: product.name,
+            description: product.description,
+            priceCents: product.priceCents,
+            categorySlug: product.category.slug,
+            imageUrl: product.images[0]?.url ?? null,
+          }
+        : null,
+      source: "db",
+    };
+  } catch {
+    const demo = demoProducts.find((p) => p.slug === slug) ?? null;
+    return {
+      product: demo
+        ? {
+            id: demo.id,
+            slug: demo.slug,
+            name: demo.name,
+            description: demo.description,
+            priceCents: demo.priceCents,
+            categorySlug: demo.categorySlug,
+            imageUrl: demo.imageUrl,
+          }
+        : null,
+      source: "demo",
+    };
+  }
+}
