@@ -56,17 +56,17 @@ export default function CarrinhoPage() {
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-wrap items-end justify-between gap-3">
-        <div>
-          <h1 className="text-2xl font-semibold tracking-tight">Carrinho</h1>
-          <p className="text-sm text-black/70">
-            Revise seus itens e finalize pelo Stripe ou WhatsApp.
-          </p>
+        <div className="flex flex-wrap items-end justify-between gap-3">
+          <div>
+            <h1 className="text-2xl font-semibold tracking-tight">Carrinho</h1>
+            <p className="text-sm text-black/70">
+              Revise seus itens e finalize pelo Stripe ou WhatsApp.
+            </p>
+          </div>
+          <button type="button" onClick={() => cart.clear()} className="mm-btn mm-btn-ghost">
+            Limpar
+          </button>
         </div>
-        <button type="button" onClick={() => cart.clear()} className="mm-btn mm-btn-ghost">
-          Limpar
-        </button>
-      </div>
 
       <div className="grid gap-6 lg:grid-cols-3">
         <div className="space-y-3 lg:col-span-2">
@@ -97,7 +97,7 @@ export default function CarrinhoPage() {
                     value={String(i.quantity)}
                     onChange={(e) => cart.setQuantity(i.productId, Number(e.target.value))}
                     inputMode="numeric"
-                    className="w-20 rounded-xl border border-black/15 px-3 py-2 text-sm"
+                    className="mm-input w-20"
                   />
                   <Link
                     href={`/produtos/${i.slug}`}
@@ -127,7 +127,7 @@ export default function CarrinhoPage() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="seuemail@exemplo.com"
-              className="mt-1 w-full rounded-xl border border-black/15 px-3 py-2 text-sm"
+              className="mm-input mt-1 w-full"
             />
           </div>
           <button
@@ -146,4 +146,3 @@ export default function CarrinhoPage() {
     </div>
   );
 }
-

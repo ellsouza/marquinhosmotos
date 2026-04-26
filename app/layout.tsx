@@ -60,7 +60,7 @@ export default function RootLayout({
               style={{ inset: "-45%" }}
             />
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/70 via-black/25 to-black/75" />
-            <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
+            <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-2 sm:py-3">
               <Link
                 href="/"
                 className="relative flex items-center gap-3 font-semibold tracking-tight"
@@ -83,7 +83,7 @@ export default function RootLayout({
               />
             </div>
           </header>
-          <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-8">
+          <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-6 sm:py-8">
             {children}
           </main>
           <StoreFooter />

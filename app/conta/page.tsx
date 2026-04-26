@@ -106,10 +106,10 @@ export default function ContaPage() {
             type="button"
             onClick={() => setMode("login")}
             className={[
-              "rounded-full px-4 py-2 text-sm",
+              "rounded-full px-4 py-2 text-sm font-semibold",
               mode === "login"
                 ? "bg-black text-white"
-                : "border border-black/15 bg-white",
+                : "border border-black/15 bg-white text-black hover:bg-amber-50",
             ].join(" ")}
           >
             Login
@@ -118,10 +118,10 @@ export default function ContaPage() {
             type="button"
             onClick={() => setMode("register")}
             className={[
-              "rounded-full px-4 py-2 text-sm",
+              "rounded-full px-4 py-2 text-sm font-semibold",
               mode === "register"
                 ? "bg-black text-white"
-                : "border border-black/15 bg-white",
+                : "border border-black/15 bg-white text-black hover:bg-amber-50",
             ].join(" ")}
           >
             Criar conta
@@ -136,13 +136,13 @@ export default function ContaPage() {
                   value={form.name}
                   onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
                   placeholder="Nome"
-                  className="w-full rounded-xl border border-black/15 px-3 py-2 text-sm"
+                  className="mm-input w-full"
                 />
                 <input
                   value={form.phone}
                   onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))}
                   placeholder="Telefone/WhatsApp"
-                  className="w-full rounded-xl border border-black/15 px-3 py-2 text-sm"
+                  className="mm-input w-full"
                 />
               </>
             ) : null}
@@ -150,19 +150,19 @@ export default function ContaPage() {
               value={form.email}
               onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
               placeholder="Email"
-              className="w-full rounded-xl border border-black/15 px-3 py-2 text-sm"
+              className="mm-input w-full"
             />
             <input
               value={form.password}
               onChange={(e) => setForm((f) => ({ ...f, password: e.target.value }))}
               placeholder="Senha (mín. 8 caracteres)"
               type="password"
-              className="w-full rounded-xl border border-black/15 px-3 py-2 text-sm"
+              className="mm-input w-full"
             />
             <button
               type="button"
               onClick={() => submit().catch(() => {})}
-              className="mt-2 rounded-xl bg-black px-4 py-2 text-sm font-medium text-white"
+              className="mm-btn mm-btn-primary mt-2 w-full"
             >
               {mode === "login" ? "Entrar" : "Criar conta"}
             </button>
@@ -182,7 +182,7 @@ export default function ContaPage() {
         <button
           type="button"
           onClick={() => logout().catch(() => {})}
-          className="rounded-xl border border-black/15 px-4 py-2 text-sm"
+          className="mm-btn mm-btn-ghost"
         >
           Sair
         </button>

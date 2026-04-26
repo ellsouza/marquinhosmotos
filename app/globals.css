@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
+  --background: #fafafa;
+  --foreground: #0a0a0a;
 }
 
 @theme inline {
@@ -10,13 +11,6 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
@@ -38,10 +32,22 @@ body {
   line-height: 1;
   transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease, transform 160ms ease;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .mm-btn:active {
   transform: translateY(1px);
+}
+
+.mm-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 204, 0, 0.55);
+}
+
+.mm-btn:disabled {
+  cursor: not-allowed;
 }
 
 .mm-btn-primary {
@@ -51,6 +57,17 @@ body {
 
 .mm-btn-primary:hover {
   background: #ffd84d;
+}
+
+.mm-btn-ghost {
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  background: rgba(255, 255, 255, 0.8);
+  color: #0a0a0a;
+}
+
+.mm-btn-ghost:hover {
+  background: rgba(255, 204, 0, 0.14);
+  border-color: rgba(0, 0, 0, 0.18);
 }
 
 .mm-btn-ghost-light {
@@ -90,12 +107,20 @@ body {
   background: rgba(0, 0, 0, 0.18);
   backdrop-filter: blur(8px);
   transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .mm-navlink:hover {
   background: rgba(255, 204, 0, 0.16);
   border-color: rgba(255, 204, 0, 0.35);
   color: #ffffff;
+}
+
+.mm-navlink:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 204, 0, 0.55);
 }
 
 .mm-iconbtn {
@@ -106,6 +131,26 @@ body {
 
 .mm-iconbtn svg {
   display: block;
+}
+
+.mm-input {
+  border-radius: 0.85rem;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: #ffffff;
+  padding: 0.6rem 0.85rem;
+  font-size: 0.9rem;
+  color: #0a0a0a;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mm-input::placeholder {
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.mm-input:focus-visible {
+  outline: none;
+  border-color: rgba(0, 0, 0, 0.22);
+  box-shadow: 0 0 0 3px rgba(255, 204, 0, 0.45);
 }
 
 .banner-diagonais {
@@ -198,11 +243,18 @@ body {
 }
 
 .header-logo--bigger {
-  height: 6.75rem;
+  height: 5.4rem;
 }
 
 @media (min-width: 640px) {
   .header-logo--bigger {
-    height: 9.25rem;
+    height: 7.6rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mm-btn,
+  .mm-navlink {
+    transition: none;
   }
 }

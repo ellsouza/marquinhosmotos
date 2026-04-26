@@ -35,7 +35,7 @@ export default async function ProdutosPage({
         </Link>
       </div>
 
-      <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0">
+      <div className="flex flex-wrap gap-2">
         {categories.map((c) => {
           const active = c.slug === selectedCategory;
           return (
@@ -43,7 +43,7 @@ export default async function ProdutosPage({
               key={c.id}
               href={`/produtos?category=${encodeURIComponent(c.slug)}`}
               className={[
-                "shrink-0 rounded-full px-4 py-2 text-sm transition",
+                "rounded-full px-3.5 py-2 text-center text-xs font-semibold leading-tight transition sm:px-4 sm:text-sm",
                 active
                   ? "bg-amber-400 text-black"
                   : "border border-black/15 bg-white hover:bg-amber-50",
