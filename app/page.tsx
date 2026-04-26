@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { StoreBadge } from "@/components/store/store-badge";
 import { WhatsAppCta } from "@/components/store/whatsapp-cta";
+import { SocialProof } from "@/components/store/social-proof";
 import { listProducts } from "@/lib/catalog";
 import { formatBRL } from "@/lib/money";
 import elements from "../public/img/elements.png";
@@ -45,21 +46,36 @@ export default async function Home() {
             <div className="space-y-5">
               <StoreBadge />
               <h1 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl md:text-4xl">
-                Peças, acessórios e itens pra sua moto — com retirada na loja ou
-                entrega
+                Peças e serviços para motos — atendimento rápido em Barueri/SP
               </h1>
               <p className="text-sm leading-relaxed text-white/85">
-                Catálogo com carrinho e checkout. Se preferir, finalize pelo
-                WhatsApp com o pedido pronto.
+                Clique em <span className="font-semibold">Solicitar orçamento</span>{" "}
+                e fale direto no WhatsApp com sua lista de peças ou serviço.
               </p>
+
               <div className="flex flex-wrap gap-3 pt-2">
-                <Link href="/produtos" className="mm-btn mm-btn-primary">
-                  Ver itens
+                <WhatsAppCta
+                  label="Solicitar orçamento"
+                  message="Olá! Quero solicitar um orçamento. Posso enviar a lista de peças/serviço?"
+                />
+                <Link href="/produtos" className="mm-btn mm-btn-ghost-light">
+                  Ver peças disponíveis
                 </Link>
                 <Link href="/loja" className="mm-btn mm-btn-ghost-light">
-                  Loja física
+                  Ver loja física
                 </Link>
-                <WhatsAppCta label="Comprar pelo WhatsApp" />
+              </div>
+
+              <div className="flex flex-wrap gap-2 text-xs text-white/70">
+                <span className="rounded-full border border-white/15 bg-white/5 px-3 py-1">
+                  Orçamento no WhatsApp
+                </span>
+                <span className="rounded-full border border-white/15 bg-white/5 px-3 py-1">
+                  Retirada na loja
+                </span>
+                <span className="rounded-full border border-white/15 bg-white/5 px-3 py-1">
+                  Entrega (consulte)
+                </span>
               </div>
             </div>
           </div>
@@ -79,6 +95,8 @@ export default async function Home() {
         </div>
       </section>
 
+      <SocialProof />
+
       <section className="relative overflow-hidden rounded-3xl border border-black/10 bg-zinc-950 text-white">
         <div className="absolute inset-0">
           <Image
@@ -95,37 +113,39 @@ export default async function Home() {
         <div className="relative space-y-6 p-6 md:p-8">
           <div className="grid gap-6 md:grid-cols-2 md:items-center">
             <div className="space-y-4">
-            <div className="space-y-1">
-              <div className="text-sm font-semibold tracking-tight text-white/90">
-                Serviços e especialidades
+              <div className="space-y-1">
+                <div className="text-sm font-semibold tracking-tight text-white/90">
+                  Serviços e especialidades
+                </div>
+                <div className="text-sm text-white/80">
+                  Mecânica geral, revisão completa, troca de óleo e diagnóstico
+                  eletrônico.
+                </div>
               </div>
-              <div className="text-sm text-white/80">
-                Mecânica geral, revisão completa, troca de óleo e diagnóstico
-                eletrônico.
+
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "Mecânica geral",
+                  "Revisão completa",
+                  "Troca de óleo",
+                  "Diagnóstico eletrônico",
+                ].map((t) => (
+                  <span
+                    key={t}
+                    className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-semibold text-white/85 backdrop-blur"
+                  >
+                    {t}
+                  </span>
+                ))}
               </div>
-            </div>
 
-            <div className="flex flex-wrap gap-2">
-              {[
-                "Mecânica geral",
-                "Revisão completa",
-                "Troca de óleo",
-                "Diagnóstico eletrônico",
-              ].map((t) => (
-                <span
-                  key={t}
-                  className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-semibold text-white/85 backdrop-blur"
-                >
-                  {t}
-                </span>
-              ))}
-            </div>
-
-            <div className="max-w-lg">
               <div className="flex flex-wrap items-center gap-3 pt-1">
-                <WhatsAppCta label="Agendar no WhatsApp" />
+                <WhatsAppCta
+                  label="Agendar no WhatsApp"
+                  message="Olá! Quero agendar um serviço. Pode me ajudar?"
+                />
                 <Link href="/loja" className="mm-btn mm-btn-ghost-light">
-                  Ver endereço
+                  Endereço e rotas
                 </Link>
               </div>
 
@@ -134,44 +154,28 @@ export default async function Home() {
                 alt=""
                 width={1200}
                 height={120}
-                className="mt-3 h-9 w-full object-contain opacity-90"
+                className="h-9 w-full object-contain opacity-90"
                 placeholder="blur"
               />
             </div>
-            </div>
 
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-4 backdrop-blur">
-              <div className="text-sm font-semibold text-white/90">
-                Principais serviços
-              </div>
-              <p className="mt-1 text-sm text-white/80">
-                Diagnóstico eletrônico, revisão e manutenção.
-              </p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                <Link href="/loja" className="mm-btn mm-btn-ghost-light">
-                  Ver endereço
-                </Link>
-                <WhatsAppCta label="Agendar no WhatsApp" />
-              </div>
-            </div>
+            <a
+              href="/img/servicos.png"
+              target="_blank"
+              rel="noreferrer"
+              className="block overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-[0_18px_40px_rgba(0,0,0,0.55)]"
+              aria-label="Ver imagem de serviços em tela cheia"
+            >
+              <Image
+                src={servicos}
+                alt="Serviços da Marquinhos Motos Mecânica Geral"
+                className="h-auto w-full object-contain"
+                placeholder="blur"
+                sizes="(max-width: 768px) 100vw, 1100px"
+                priority={false}
+              />
+            </a>
           </div>
-
-          <a
-            href="/img/servicos.png"
-            target="_blank"
-            rel="noreferrer"
-            className="block overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-[0_18px_40px_rgba(0,0,0,0.55)]"
-            aria-label="Ver imagem de serviços em tela cheia"
-          >
-            <Image
-              src={servicos}
-              alt="Serviços da Marquinhos Motos Mecânica Geral"
-              className="h-auto w-full object-contain"
-              placeholder="blur"
-              sizes="(max-width: 768px) 100vw, 1100px"
-              priority={false}
-            />
-          </a>
         </div>
       </section>
 
@@ -179,17 +183,17 @@ export default async function Home() {
         <div className="flex items-end justify-between gap-4">
           <div>
             <h2 className="text-xl font-semibold tracking-tight">
-              Destaques de hoje
+              Peças em destaque
             </h2>
             <p className="text-sm text-black/70">
-              Itens mais procurados — clique para ver detalhes.
+              Clique para ver detalhes e adicionar no carrinho.
             </p>
           </div>
           <Link
             href="/produtos"
             className="text-sm text-black/70 underline underline-offset-4 hover:text-black"
           >
-            Ver tudo
+            Ver todas
           </Link>
         </div>
 
@@ -228,3 +232,4 @@ export default async function Home() {
     </div>
   );
 }
+

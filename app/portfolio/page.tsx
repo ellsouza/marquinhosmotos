@@ -145,6 +145,9 @@ export default function PortfolioPromptEngineeringPage() {
           <Link href="/produtos" className="mm-btn mm-btn-ghost">
             Ver produtos
           </Link>
+          <Link href="/ai/descricao" className="mm-btn mm-btn-ghost">
+            Ver feature IA
+          </Link>
         </div>
       </section>
     </div>

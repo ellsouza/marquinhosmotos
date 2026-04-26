@@ -11,6 +11,7 @@ MVP de e-commerce com:
 
 - Produção (Vercel): `https://marquinhosmotos-qus9.vercel.app/`
 - Case (Prompt Engineering): `PORTFOLIO_PROMPT_ENGINEERING.md` (e página `/portfolio`)
+- Feature IA (gerar descrição): `/ai/descricao` (precisa `OPENAI_API_KEY` para IA real; sem isso usa fallback)
 
 ## Rodar localmente
 

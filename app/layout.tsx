@@ -6,6 +6,7 @@ import Image from "next/image";
 import { CartProvider } from "@/components/cart/cart-provider";
 import { HeaderNav } from "@/components/layout/header-nav";
 import { StoreFooter } from "@/components/store/store-footer";
+import { FloatingWhatsApp } from "@/components/store/floating-whatsapp";
 import { getStorePublicConfig } from "@/lib/store";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 
@@ -42,7 +43,10 @@ export default function RootLayout({
   const mapsQuery = store.googleMapsQuery || store.address;
   const instagramHref = store.instagramUrl;
   const phoneHref = `tel:${store.phone.replaceAll(/[^\d+]/g, "")}`;
-  const whatsHref = buildWhatsAppLink(store.whatsAppE164, "Olá! Vim pelo site.");
+  const whatsHref = buildWhatsAppLink(
+    store.whatsAppE164,
+    store.whatsAppDefaultMessage,
+  );
   const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
     mapsQuery,
   )}`;
@@ -87,6 +91,7 @@ export default function RootLayout({
             {children}
           </main>
           <StoreFooter />
+          <FloatingWhatsApp />
         </CartProvider>
       </body>
     </html>

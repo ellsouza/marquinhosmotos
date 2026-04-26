@@ -4,13 +4,18 @@ import { WhatsAppIcon } from "@/components/icons/icons";
 
 export function WhatsAppCta({
   label,
+  message,
   className,
 }: {
   label: string;
+  message?: string;
   className?: string;
 }) {
   const store = getStorePublicConfig();
-  const href = buildWhatsAppLink(store.whatsAppE164, "Olá! Vim pelo site.");
+  const href = buildWhatsAppLink(
+    store.whatsAppE164,
+    message ?? store.whatsAppDefaultMessage,
+  );
 
   return (
     <a
@@ -24,3 +29,4 @@ export function WhatsAppCta({
     </a>
   );
 }
+
