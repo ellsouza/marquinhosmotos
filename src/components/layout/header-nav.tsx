@@ -26,6 +26,10 @@ export function HeaderNav({
   const pathname = usePathname() ?? "/";
   const showHome = pathname !== "/";
   const [open, setOpen] = useState(false);
+  const ariaCurrent = (href: string) =>
+    pathname === href || (href !== "/" && pathname.startsWith(`${href}/`))
+      ? "page"
+      : undefined;
 
   useEffect(() => {
     if (!open) return;
@@ -45,13 +49,32 @@ export function HeaderNav({
               Início
             </Link>
           ) : null}
-          <Link href="/produtos" className="mm-navlink">
+          <Link
+            href="/produtos"
+            className="mm-navlink"
+            aria-current={ariaCurrent("/produtos")}
+          >
             Itens
           </Link>
-          <Link href="/loja" className="mm-navlink">
+          <Link
+            href="/portfolio"
+            className="mm-navlink"
+            aria-current={ariaCurrent("/portfolio")}
+          >
+            Case IA
+          </Link>
+          <Link
+            href="/loja"
+            className="mm-navlink"
+            aria-current={ariaCurrent("/loja")}
+          >
             Loja física
           </Link>
-          <Link href="/conta" className="mm-navlink">
+          <Link
+            href="/conta"
+            className="mm-navlink"
+            aria-current={ariaCurrent("/conta")}
+          >
             Conta
           </Link>
         </div>
@@ -157,13 +180,23 @@ export function HeaderNav({
                   href="/produtos"
                   onClick={() => setOpen(false)}
                   className="mm-navlink w-full justify-start"
+                  aria-current={ariaCurrent("/produtos")}
                 >
                   Itens
+                </Link>
+                <Link
+                  href="/portfolio"
+                  onClick={() => setOpen(false)}
+                  className="mm-navlink w-full justify-start"
+                  aria-current={ariaCurrent("/portfolio")}
+                >
+                  Case IA
                 </Link>
                 <Link
                   href="/loja"
                   onClick={() => setOpen(false)}
                   className="mm-navlink w-full justify-start"
+                  aria-current={ariaCurrent("/loja")}
                 >
                   Loja física
                 </Link>
@@ -171,6 +204,7 @@ export function HeaderNav({
                   href="/conta"
                   onClick={() => setOpen(false)}
                   className="mm-navlink w-full justify-start"
+                  aria-current={ariaCurrent("/conta")}
                 >
                   Conta
                 </Link>

@@ -10,6 +10,7 @@ MVP de e-commerce com:
 ## Links
 
 - Produção (Vercel): `https://marquinhosmotos-qus9.vercel.app/`
+- Case (Prompt Engineering): `PORTFOLIO_PROMPT_ENGINEERING.md` (e página `/portfolio`)
 
 ## Rodar localmente
 

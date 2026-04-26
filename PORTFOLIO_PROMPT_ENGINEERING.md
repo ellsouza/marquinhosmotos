@@ -1,123 +1,108 @@
-# Portfólio — Engenharia de Prompt (case study)
+# Portfólio — Prompt Engineering (case study)
 
-Projeto: **Marquinhos Motos (site)**  
-Stack: Next.js 16 (App Router) + React 19 + TypeScript + Tailwind v4 + Prisma/Postgres + Stripe (opcional)  
-Produção (Vercel): `https://marquinhosmotos-qus9.vercel.app/`
+## Resumo (30 segundos)
 
-## Contexto
+Eu uso **prompt engineering como ferramenta de engenharia de software** para acelerar entregas em produto real, com rastreabilidade (commits pequenos), requisitos objetivos e validação (`lint`/`build`) antes de enviar.
 
-O objetivo foi acelerar entregas de produto usando IA como “copiloto” para:
-- Diagnosticar problemas reais de UI/UX em mobile (contraste, legibilidade, botões “sumindo”, overflow).
-- Converter feedback subjetivo (“tá terrível”) em **tarefas verificáveis**.
-- Manter qualidade de engenharia (lint/build passando, mudanças focadas, sem regressão).
+- Projeto: **Marquinhos Motos (site)** — MVP de e-commerce (catálogo, carrinho, checkout/WhatsApp, conta/pedidos)
+- Stack: Next.js 16 (App Router) + React 19 + TypeScript + Tailwind v4 + Prisma/Postgres + Stripe (opcional)
+- Produção (Vercel): `https://marquinhosmotos-qus9.vercel.app/`
 
-> Observação: o app **não** integra LLM/IA no runtime. A “engenharia de prompt” aqui é o processo de orientar a IA a produzir mudanças de código com qualidade e rastreabilidade.
+> Importante: não há LLM rodando em produção. “Prompt engineering” aqui é o processo de orientar um copiloto de IA a produzir mudanças de código com qualidade (escopo, restrições, critérios de aceitação, revisão e validação).
 
-## Tarefas e resultados (o que foi entregue)
+## O problema (por que isso importa)
 
-### 1) Legibilidade no mobile (contraste / cores)
+O app estava “funcionando”, mas tinha atritos que derrubam conversão e confiança em mobile:
 
-**Problema observado**
-- No mobile, textos/botões ficavam com **texto claro em fundo claro** e só “apareciam” ao tocar.
+- Legibilidade/contraste inconsistente (texto e botões com baixa visibilidade em alguns cenários).
+- Layout com rolagem horizontal indesejada em chips de categoria.
+- Pequenas quebras visuais (ícones/elementos deformando em tamanhos específicos).
+- Documentação incompleta para validação por terceiros (deploy/URLs).
 
-**Causa raiz (diagnóstico)**
-- CSS global alternava variáveis para “dark mode” via `prefers-color-scheme: dark`, mas várias telas usam fundos claros (`bg-zinc-50`, `bg-white`).  
-  Resultado: `--foreground` claro + fundo claro = baixa visibilidade.
+Meu foco foi converter feedback subjetivo (“tá ruim”) em **tarefas verificáveis** com diagnóstico e aceitação explícita.
 
-**Correção implementada**
-- Removi a troca automática para dark em `app/globals.css` e forcei `color-scheme: light`.
-- Padronizei estados de foco (`:focus-visible`) em botões/links e criei estilos reutilizáveis:
-  - `.mm-btn-ghost` (classe era usada, mas não existia)
-  - `.mm-input` (inputs mais consistentes e legíveis)
+## Entregas (com evidência)
 
-**Evidência**
-- Commit: `c5f361c`
-- Verificação: `npm run lint` + `npm run build` (passando no ambiente local)
+### 1) Contraste e foco no mobile (UI/A11y pragmático)
 
-### 2) UX no mobile (chips de categoria sem “scroll lateral”)
+- O que fiz: ajuste do baseline visual para evitar combinações de “texto claro em fundo claro”, e padronização de `:focus-visible` e utilitários (botões/inputs) para consistência.
+- Onde: `app/globals.css`, `app/layout.tsx`, páginas de UI relacionadas.
+- Evidência: commit `c5f361c`.
 
-**Problema observado**
-- Lista de categorias em `/produtos` criava rolagem lateral e “deformava” o layout.
+### 2) Categorias sem “scroll lateral” (UX em telas pequenas)
 
-**Correção implementada**
-- Troquei a barra com `overflow-x-auto` por `flex-wrap` (chips quebram linha e ficam dentro da tela).
-- Ajustei tipografia no mobile (tamanho menor e `leading-tight`) para nomes longos.
+- O que fiz: removi o padrão que empurrava o layout para rolagem horizontal e reorganizei os chips para quebrar linha (`flex-wrap`) mantendo clique/legibilidade.
+- Onde: `app/produtos/page.tsx`.
+- Evidência: commit `c5f361c`.
 
-**Evidência**
-- Alteração: `app/produtos/page.tsx`
+### 3) Ícone do WhatsApp sem deformar (consistência visual)
 
-### 3) Ícone do WhatsApp deformado
+- O que fiz: ajustes no SVG para manter proporção e traço consistente em diferentes containers.
+- Onde: `src/components/icons/icons.tsx`.
+- Evidência: commit `167c38c`.
 
-**Problema observado**
-- Em alguns tamanhos/containers, o ícone do WhatsApp parecia “torto”/deformado.
+### 4) README pronto para review (onboarding/validação)
 
-**Correção implementada**
-- Ajustei o SVG para manter proporção e traço consistente:
-  - `preserveAspectRatio="xMidYMid meet"`
-  - `vectorEffect="non-scaling-stroke"`
+- O que fiz: documentação do link de produção e variáveis relevantes (incluindo `NEXT_PUBLIC_SITE_URL`) para revisão rápida e reproduzibilidade.
+- Onde: `README.md`.
+- Evidência: commit `1bf3586`.
 
-**Evidência**
-- Commit: `167c38c`
-- Arquivo: `src/components/icons/icons.tsx`
+## Como eu aplico Prompt Engineering (método técnico)
 
-### 4) Documentação (README apontando a URL correta)
+### 1) “Especificação antes do código” (prompt como PRD curto)
 
-**Problema observado**
-- README não trazia a URL de produção (Vercel), o que atrapalha validação por terceiros.
+Eu formato o prompt como um mini-PRD para reduzir ambiguidade:
 
-**Correção implementada**
-- Adicionei seção “Links” com a URL do deploy.
-- Documentei `NEXT_PUBLIC_SITE_URL` e ajustei instruções do checkout para refletir o estado atual.
+- **Objetivo** (1 frase): o que muda e por quê
+- **Escopo**: arquivos/rotas alvo
+- **Restrições**: não refatorar fora do necessário; manter Tailwind; não quebrar desktop
+- **Critérios de aceitação**: verificáveis (ex.: “sem overflow-x”, “foco visível no teclado”, “lint/build ok”)
+- **Plano de validação**: comandos e checagens
 
-**Evidência**
-- Commit: `1bf3586`
-- Arquivo: `README.md`
+Template:
 
-## Como eu usei Engenharia de Prompt (método)
+```text
+Objetivo: corrigir legibilidade e foco em mobile sem mudar layout desktop.
+Escopo: app/globals.css, app/layout.tsx, app/produtos/page.tsx.
+Restrições: manter Tailwind v4; evitar refator grande; não mudar API.
+Aceitação: (1) sem rolagem horizontal em /produtos; (2) botões/links com foco visível; (3) npm run lint + npm run build sem erros.
+Entregável: patch focado + explicação do diagnóstico (causa raiz).
+```
 
-### A) Transformar feedback em requisitos objetivos
+### 2) “Prompt para diagnóstico” (causa raiz > sintomas)
 
-Exemplos de “tradução”:
-- “Não aparece a escrita do botão no mobile” → “Garantir contraste AA para texto/botões em telas claras e em devices com `prefers-color-scheme: dark`”.
-- “Rolagem de itens não é legal” → “Remover overflow horizontal e manter categorias clicáveis dentro da viewport”.
+Antes de aceitar uma sugestão de mudança, eu forço o copiloto a:
 
-### B) Propor prompts com restrições claras
+- levantar hipóteses de causa (CSS global, variáveis de cor, preferências do SO);
+- indicar **onde** a causa se manifesta (arquivos/classes);
+- propor uma correção mínima, reversível e testável.
 
-Estrutura de prompt que funcionou bem:
-- **Objetivo**: o que precisa mudar
-- **Restrições**: não quebrar desktop, manter Tailwind, evitar refator grande
-- **Critério de aceitação**: comportamento observável (sem scroll-x; texto legível; foco visível; lint/build ok)
-- **Escopo**: arquivos/componentes alvo
+Isso evita “pintar por cima” sem entender por que quebrou.
 
-### C) Validar e versionar (rastreabilidade)
+### 3) “Prompt para revisão” (checklist de qualidade)
 
-Checklist aplicado:
-- Lint: `npm run lint`
-- Build: `npm run build`
-- Commits pequenos e descritivos (cada problema com um commit quando possível)
-- Mensagens de commit focadas em “valor entregue” (fix/docs)
+Depois do patch, eu uso um prompt de revisão para:
 
-## Mapa do projeto (para reviewers)
+- detectar regressões de UI/UX e acessibilidade (foco/contraste/scroll);
+- garantir consistência de classes utilitárias;
+- checar se a mudança não espalhou responsabilidades.
 
-**UI (App Router)**
-- `app/page.tsx` (home)
-- `app/produtos/page.tsx` e `app/produtos/[slug]/page.tsx`
-- `app/carrinho/page.tsx`
-- `app/loja/page.tsx`
-- `app/conta/page.tsx`
-- `app/layout.tsx` e `app/globals.css`
+## Como eu valido (engenharia de entrega)
 
-**API**
-- `app/api/*/route.ts` (auth, catálogo, checkout, pedidos, placeholder SVG)
+- Validação local: `npm run lint` e `npm run build`
+- Mudanças pequenas e rastreáveis (um problema por commit quando possível)
+- Mensagens de commit orientadas a valor (“fix/docs” + resultado)
 
-**Domínio/infra**
-- `prisma/schema.prisma` + `prisma/seed.ts`
-- `src/lib/*` (auth/JWT, catálogo demo vs DB, db/prisma, rate-limit, whatsapp link)
+## Mapa rápido para quem avalia
 
-## Próximos passos (ideias para evolução)
+- UI (App Router): `app/page.tsx`, `app/produtos/*`, `app/layout.tsx`, `app/globals.css`
+- API: `app/api/*/route.ts` (auth, catálogo, checkout, pedidos, etc.)
+- Dados: `prisma/schema.prisma`, `prisma/seed.ts`
+- Componentes: `src/components/*` (header, footer, cart, ícones)
 
-- A11y: adicionar estados `aria-current` nas categorias e refinamento de foco no menu mobile.
-- Observabilidade: logs mínimos e IDs de correlação nas rotas API.
-- Stripe: implementar webhook e atualizar status do pedido (`PAID`) automaticamente.
-- Design system: extrair tokens e componentes UI (botões/inputs/cards) para reduzir repetição.
+## Próximos passos (o que eu faria com mais tempo)
 
+- A11y: `aria-current` em navegação/categorias, e refinamento do foco no menu mobile.
+- Observabilidade: logs mínimos + IDs de correlação nas rotas API.
+- Pagamento: completar fluxo de webhook Stripe para status de pedido.
+- Design system: extrair tokens/componentes para reduzir repetição e acelerar manutenção.
