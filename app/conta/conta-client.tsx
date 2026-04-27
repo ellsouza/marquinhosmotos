@@ -35,6 +35,7 @@ export default function ContaClient() {
   const [form, setForm] = useState({
     email: "",
     password: "",
+    confirmPassword: "",
     name: "",
     phone: "",
   });
@@ -100,9 +101,15 @@ export default function ContaClient() {
         : {
             email: form.email,
             password: form.password,
+            confirmPassword: form.confirmPassword,
             name: form.name,
             phone: form.phone,
           };
+
+    if (mode === "register" && form.password !== form.confirmPassword) {
+      alert("As senhas não conferem.");
+      return;
+    }
 
     const res = await fetch(endpoint, {
       method: "POST",
@@ -217,10 +224,21 @@ export default function ContaClient() {
             <input
               value={form.password}
               onChange={(e) => setForm((f) => ({ ...f, password: e.target.value }))}
-              placeholder="Senha (mín. 8 caracteres)"
+              placeholder={mode === "register" ? "Senha (mín. 8 caracteres)" : "Senha"}
               type="password"
               className="mm-input w-full"
             />
+            {mode === "register" ? (
+              <input
+                value={form.confirmPassword}
+                onChange={(e) =>
+                  setForm((f) => ({ ...f, confirmPassword: e.target.value }))
+                }
+                placeholder="Confirmar senha"
+                type="password"
+                className="mm-input w-full"
+              />
+            ) : null}
             <button
               type="button"
               onClick={() => submit().catch(() => {})}
@@ -280,4 +298,3 @@ export default function ContaClient() {
     </div>
   );
 }
-

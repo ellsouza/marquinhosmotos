@@ -8,8 +8,17 @@ import { rateLimit } from "@/lib/rate-limit";
 const BodySchema = z.object({
   email: z.string().email(),
   password: z.string().min(8).max(200),
+  confirmPassword: z.string().min(8).max(200).optional(),
   name: z.string().min(2).max(80).optional(),
   phone: z.string().min(8).max(30).optional(),
+}).superRefine((val, ctx) => {
+  if (typeof val.confirmPassword === "string" && val.confirmPassword !== val.password) {
+    ctx.addIssue({
+      code: "custom",
+      path: ["confirmPassword"],
+      message: "As senhas não conferem.",
+    });
+  }
 });
 
 export async function POST(req: NextRequest) {
