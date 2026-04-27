@@ -157,14 +157,14 @@ export default function ContaClient() {
               href="/api/auth/oauth/google/start"
               className="mm-btn mm-btn-outline-dark w-full justify-center"
             >
-              <GoogleIcon className="h-5 w-5" />
+              <GoogleIcon className="h-5 w-5 shrink-0" />
               Continuar com Google
             </a>
             <a
               href="/api/auth/oauth/apple/start"
               className="mm-btn mm-btn-outline-dark w-full justify-center"
             >
-              <AppleIcon className="h-5 w-5" />
+              <AppleIcon className="h-5 w-5 shrink-0" />
               Continuar com Apple
             </a>
           </div>
