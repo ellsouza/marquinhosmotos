@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { StoreBadge } from "@/components/store/store-badge";
-import { RealStoreNote } from "@/components/store/real-store-note";
 import { WhatsAppCta } from "@/components/store/whatsapp-cta";
 import { SocialProof } from "@/components/store/social-proof";
 import { listProducts } from "@/lib/catalog";
@@ -82,8 +81,6 @@ export default async function Home() {
                   Entrega (consulte)
                 </span>
               </div>
-
-              <RealStoreNote tone="dark" />
             </div>
           </div>
 

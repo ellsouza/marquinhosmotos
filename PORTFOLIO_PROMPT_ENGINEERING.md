@@ -5,7 +5,7 @@
 Eu uso **prompt engineering como ferramenta de engenharia de software** para acelerar entregas em produto real, com rastreabilidade (commits pequenos), requisitos objetivos e validação (`lint`/`build`) antes de enviar.
 
 - Projeto: **Marquinhos Motos (site)** — MVP de e-commerce (catálogo, carrinho, checkout/WhatsApp, conta/pedidos)
-- Origem: inspirado em uma **loja real** (dos meus tios), com autorização para uso como referência
+- Origem: inspirado em uma **loja real**, com autorização para uso como referência
 - Stack: Next.js 16 (App Router) + React 19 + TypeScript + Tailwind v4 + Prisma/Postgres + Stripe (opcional)
 - Produção (Vercel): `https://marquinhosmotos-qus9.vercel.app/`
 

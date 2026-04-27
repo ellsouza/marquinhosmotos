@@ -54,14 +54,14 @@ export function HeaderNav({
             className="mm-navlink"
             aria-current={ariaCurrent("/produtos")}
           >
-            Itens
+            Peças
           </Link>
           <Link
-            href="/portfolio"
+            href="/servicos"
             className="mm-navlink"
-            aria-current={ariaCurrent("/portfolio")}
+            aria-current={ariaCurrent("/servicos")}
           >
-            Case
+            Serviços
           </Link>
           <Link
             href="/loja"
@@ -182,15 +182,15 @@ export function HeaderNav({
                   className="mm-navlink w-full justify-start"
                   aria-current={ariaCurrent("/produtos")}
                 >
-                  Itens
+                  Peças
                 </Link>
                 <Link
-                  href="/portfolio"
+                  href="/servicos"
                   onClick={() => setOpen(false)}
                   className="mm-navlink w-full justify-start"
-                  aria-current={ariaCurrent("/portfolio")}
+                  aria-current={ariaCurrent("/servicos")}
                 >
-                  Case
+                  Serviços
                 </Link>
                 <Link
                   href="/loja"

@@ -1,5 +1,4 @@
 import { StoreInfo } from "@/components/store/store-info";
-import { RealStoreNote } from "@/components/store/real-store-note";
 import { WhatsAppCta } from "@/components/store/whatsapp-cta";
 
 export default function LojaPage() {
@@ -13,7 +12,6 @@ export default function LojaPage() {
         <WhatsAppCta label="Chamar no WhatsApp" />
       </div>
 
-      <RealStoreNote />
       <StoreInfo />
     </div>
   );

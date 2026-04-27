@@ -118,8 +118,8 @@ export function StoreFooter() {
                 <Link href="/conta" className="hover:text-white hover:underline">
                   Conta
                 </Link>
-                <Link href="/portfolio" className="hover:text-white hover:underline">
-                  Case
+                <Link href="/servicos" className="hover:text-white hover:underline">
+                  Serviços
                 </Link>
                 <a
                   href={store.instagramUrl}

@@ -1,7 +1,5 @@
 # Marquinhos Motos (site)
 
-Este projeto foi inspirado em uma loja real (dos meus tios) e feito com autorização.
-
 MVP de e-commerce com:
 - Catálogo por categorias
 - Carrinho
@@ -12,7 +10,6 @@ MVP de e-commerce com:
 ## Links
 
 - Produção (Vercel): `https://marquinhosmotos-qus9.vercel.app/`
-- Case (Prompt Engineering): `PORTFOLIO_PROMPT_ENGINEERING.md` (e página `/portfolio`)
 
 ## Rodar localmente
 

@@ -88,9 +88,8 @@ export default async function ProdutosPage({
       </div>
 
       <div className="rounded-2xl border border-black/10 bg-white p-4 text-sm text-black/70">
-        As imagens aqui estão como <span className="font-medium">ilustrativas</span>
-        . Quando você colocar fotos reais (Instagram/Google) eu conecto cada item com
-        a foto correta.
+        Fotos e descrições podem variar conforme lote/fornecedor. Confirme compatibilidade,
+        disponibilidade e prazo pelo WhatsApp.
       </div>
 
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
