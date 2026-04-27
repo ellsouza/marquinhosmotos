@@ -24,6 +24,8 @@ model User {
   passwordHash String
   name         String?
   phone        String?
+  googleSub    String?  @unique
+  appleSub     String?  @unique
   role         UserRole @default(CUSTOMER)
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt

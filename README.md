@@ -19,6 +19,7 @@ MVP de e-commerce com:
 - `MM_JWT_ISSUER` e `MM_JWT_AUDIENCE` (opcional; ajuda a endurecer o JWT)
 - `NEXT_PUBLIC_*` (nome, WhatsApp, endereço, Instagram)
 - `NEXT_PUBLIC_SITE_URL` (URL base do site; em produção deve ser a URL do Vercel)
+- (Opcional) OAuth: `GOOGLE_CLIENT_ID/GOOGLE_CLIENT_SECRET` e/ou `APPLE_*`
 
 2) Instale e gere o Prisma Client:
 
