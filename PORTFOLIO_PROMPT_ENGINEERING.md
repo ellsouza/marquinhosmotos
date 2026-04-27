@@ -2,7 +2,7 @@
 
 ## Resumo (30 segundos)
 
-Eu uso **prompt engineering como ferramenta de engenharia de software** para acelerar entregas em produto real, com rastreabilidade (commits pequenos), requisitos objetivos e validação (`lint`/`build`) antes de enviar.
+Uso de **prompt engineering como ferramenta de engenharia de software** para acelerar entregas em produto real, com rastreabilidade (commits pequenos), requisitos objetivos e validação (`lint`/`build`) antes de enviar.
 
 - Projeto: **Marquinhos Motos (site)** — MVP de e-commerce (catálogo, carrinho, checkout/WhatsApp, conta/pedidos)
 - Origem: inspirado em uma **loja real**, com autorização para uso como referência
@@ -20,7 +20,7 @@ O app estava “funcionando”, mas tinha atritos que derrubam conversão e conf
 - Pequenas quebras visuais (ícones/elementos deformando em tamanhos específicos).
 - Documentação incompleta para validação por terceiros (deploy/URLs).
 
-Meu foco foi converter feedback subjetivo (“tá ruim”) em **tarefas verificáveis** com diagnóstico e aceitação explícita.
+Foco em converter feedback subjetivo (“tá ruim”) em **tarefas verificáveis** com diagnóstico e aceitação explícita.
 
 ## Entregas (com evidência)
 
@@ -52,7 +52,7 @@ Meu foco foi converter feedback subjetivo (“tá ruim”) em **tarefas verific�
 
 ### 1) “Especificação antes do código” (prompt como PRD curto)
 
-Eu formato o prompt como um mini-PRD para reduzir ambiguidade:
+O prompt é estruturado como um mini-PRD para reduzir ambiguidade:
 
 - **Objetivo** (1 frase): o que muda e por quê
 - **Escopo**: arquivos/rotas alvo
