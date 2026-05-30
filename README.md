@@ -1,54 +1,73 @@
-# Marquinhos Motos (site)
+# Marquinhos Motos
 
-MVP de e-commerce com:
-- Catálogo por categorias
-- Carrinho
-- Checkout (Stripe) com fallback para pedido via WhatsApp
-- Cadastro/Login (sessão via cookie JWT) e página “Conta” com pedidos
-- Página da loja física (endereço + mapa)
+Site de e-commerce para venda de peças de moto, com catálogo, carrinho,
+favoritos, conta do cliente, pedidos e checkout online opcional.
 
-## Links
+## O que existe hoje
 
-- Produção (Vercel): `https://marquinhosmotos-qus9.vercel.app/`
+- Catálogo por categorias com paginação.
+- Carrinho persistido no navegador.
+- Favoritos persistidos no navegador.
+- Checkout com validação no backend.
+- Pagamento por cartão via Stripe Checkout quando `STRIPE_SECRET_KEY` está configurada.
+- Fallback por Pix/WhatsApp, sem gateway, com confirmação manual pela loja.
+- Webhook Stripe em `/api/webhooks/stripe` para marcar pedido como pago e baixar estoque.
+- Cadastro/login com cookie HTTP-only assinado por JWT.
+- Rate limit básico nas rotas sensíveis.
+- Headers de segurança configurados no Next.js.
+
+## Pagamentos
+
+Não existe gateway online 100% gratuito para cartão: normalmente não há mensalidade,
+mas há taxa por transação. A opção sem gateway no projeto é Pix/WhatsApp, em que o
+cliente envia o pedido e a loja confirma o pagamento manualmente.
+
+Para cartão online:
+
+1. Crie uma conta Stripe.
+2. Preencha `STRIPE_SECRET_KEY`.
+3. Configure o webhook apontando para `/api/webhooks/stripe`.
+4. Preencha `STRIPE_WEBHOOK_SECRET`.
 
 ## Rodar localmente
 
-1) Crie um arquivo `.env` baseado em `.env.example` e preencha:
-- `DATABASE_URL` (PostgreSQL)
-- `AUTH_SECRET` (string longa e aleatória)
-- `MM_JWT_ISSUER` e `MM_JWT_AUDIENCE` (opcional; ajuda a endurecer o JWT)
-- `NEXT_PUBLIC_*` (nome, WhatsApp, endereço, Instagram)
-- `NEXT_PUBLIC_SITE_URL` (URL base do site; em produção deve ser a URL do Vercel)
-- (Opcional) OAuth: `GOOGLE_CLIENT_ID/GOOGLE_CLIENT_SECRET` e/ou `APPLE_*`
-
-2) Instale e gere o Prisma Client:
+1. Crie um `.env` baseado em `.env.example`.
+2. Instale dependências:
 
 ```bash
 npm install
+```
+
+3. Gere o Prisma Client:
+
+```bash
 npm run prisma:generate
 ```
 
-3) Rode migrações e seed (precisa do Postgres rodando):
+4. Suba o banco, aplique schema e seed:
 
 ```bash
-npm run db:migrate
+npm run db:up
+npm run db:push
 npm run db:seed
 ```
 
-4) Suba o dev server:
+5. Rode o site:
 
 ```bash
 npm run dev
 ```
 
-Abra `http://localhost:3000` (ou a porta exibida no terminal).
+Abra `http://localhost:3000`.
 
-## Produtos / conteúdo
+## Arquivos principais
 
-- Para gerenciar produtos rapidamente: `npm run prisma:studio`
-- As imagens no seed são placeholders; substitua por URLs reais (ou imagens em `public/`).
-
-## Checkout
-
-- Para checkout real por cartão: configure `STRIPE_SECRET_KEY` no `.env`.
-- Sem Stripe configurado, o botão “Finalizar compra” redireciona para o WhatsApp com o pedido pré-preenchido.
+- `app/page.tsx`: home.
+- `app/produtos/page.tsx`: catálogo.
+- `app/produtos/[slug]/page.tsx`: detalhe do produto.
+- `app/carrinho/page.tsx`: carrinho e checkout.
+- `app/favoritos/page.tsx`: favoritos.
+- `app/conta/page.tsx`: login, cadastro e pedidos.
+- `app/api/checkout/route.ts`: criação de pedido e checkout.
+- `app/api/webhooks/stripe/route.ts`: confirmação de pagamento Stripe.
+- `prisma/schema.prisma`: modelo do banco.

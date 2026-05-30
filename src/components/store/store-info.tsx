@@ -6,9 +6,11 @@ export function StoreInfo() {
   const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(
     mapQuery,
   )}&output=embed`;
-  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-    mapQuery,
-  )}`;
+  const mapsUrl =
+    store.googleMapsUrl ||
+    `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+      mapQuery,
+    )}`;
   const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
     mapQuery,
   )}`;
@@ -84,4 +86,3 @@ export function StoreInfo() {
     </div>
   );
 }
-

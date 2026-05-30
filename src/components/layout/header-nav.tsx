@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { CartButton } from "@/components/cart/cart-button";
+import { FavoritesButton } from "@/components/favorites/favorites-button";
 import {
   CloseIcon,
   InstagramIcon,
@@ -116,6 +117,7 @@ export function HeaderNav({
           </a>
         </div>
 
+        <FavoritesButton />
         <div className="flex items-center gap-2 sm:hidden">
           <a
             href={whatsHref}
@@ -199,6 +201,14 @@ export function HeaderNav({
                   aria-current={ariaCurrent("/loja")}
                 >
                   Loja física
+                </Link>
+                <Link
+                  href="/favoritos"
+                  onClick={() => setOpen(false)}
+                  className="mm-navlink w-full justify-start"
+                  aria-current={ariaCurrent("/favoritos")}
+                >
+                  Favoritos
                 </Link>
                 <Link
                   href="/conta"

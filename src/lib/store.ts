@@ -1,6 +1,9 @@
 export function getStorePublicConfig() {
   const city = process.env.NEXT_PUBLIC_STORE_CITY ?? "Barueri";
   const state = process.env.NEXT_PUBLIC_STORE_STATE ?? "SP";
+  const googleMapsUrl =
+    process.env.NEXT_PUBLIC_GOOGLE_MAPS_URL ??
+    "https://www.google.com/maps/place/Marquinhos+motos+mecanica+geral/@-23.5405359,-46.8845775,17z/data=!3m1!4b1!4m6!3m5!1s0x94cf01159ed11953:0xa84095ace630e59e!8m2!3d-23.5405408!4d-46.8820026!16s%2Fg%2F11f4qfpjmg?entry=ttu";
 
   return {
     siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
@@ -24,9 +27,10 @@ export function getStorePublicConfig() {
     googleMapsQuery:
       process.env.NEXT_PUBLIC_GOOGLE_MAPS_QUERY ??
       "Marquinhos motos mecanica geral",
+    googleMapsUrl,
     googleRating: process.env.NEXT_PUBLIC_GOOGLE_RATING ?? "4,7",
     googleReviewsCount: process.env.NEXT_PUBLIC_GOOGLE_REVIEWS ?? "4733",
-    googleReviewsUrl: process.env.NEXT_PUBLIC_GOOGLE_REVIEWS_URL ?? "",
+    googleReviewsUrl: process.env.NEXT_PUBLIC_GOOGLE_REVIEWS_URL ?? googleMapsUrl,
     instagramUrl:
       process.env.NEXT_PUBLIC_INSTAGRAM_URL ??
       "https://www.instagram.com/marquinhosmotosbarueri/",

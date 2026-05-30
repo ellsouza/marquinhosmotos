@@ -15,9 +15,11 @@ function Star({ filled }: { filled: boolean }) {
 export function SocialProof() {
   const store = getStorePublicConfig();
   const mapQuery = store.googleMapsQuery || store.address;
-  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-    mapQuery,
-  )}`;
+  const mapsUrl =
+    store.googleMapsUrl ||
+    `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+      mapQuery,
+    )}`;
   const reviewsUrl = store.googleReviewsUrl || mapsUrl;
 
   return (
@@ -61,4 +63,3 @@ export function SocialProof() {
     </section>
   );
 }
-

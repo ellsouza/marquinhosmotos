@@ -6,9 +6,14 @@ import { useMemo, useState } from "react";
 import { useCart } from "@/components/cart/cart-provider";
 import { formatBRL } from "@/lib/money";
 
+type PaymentMethod = "whatsapp" | "stripe";
+
 export default function CarrinhoPage() {
   const cart = useCart();
   const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>("whatsapp");
   const [loading, setLoading] = useState(false);
 
   const itemsPayload = useMemo(
@@ -24,6 +29,9 @@ export default function CarrinhoPage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           email: email.trim() ? email.trim() : null,
+          name: name.trim() ? name.trim() : null,
+          phone: phone.trim() ? phone.trim() : null,
+          paymentMethod,
           items: itemsPayload,
         }),
       });
@@ -60,7 +68,7 @@ export default function CarrinhoPage() {
         <div>
           <h1 className="text-2xl font-semibold tracking-tight">Carrinho</h1>
           <p className="text-sm text-black/70">
-            Revise seus itens e finalize pelo Stripe ou WhatsApp.
+            Revise os itens, escolha a forma de pagamento e finalize com segurança.
           </p>
         </div>
         <button
@@ -79,15 +87,15 @@ export default function CarrinhoPage() {
               key={i.productId}
               className="flex gap-4 rounded-2xl border border-black/10 bg-white p-4"
             >
-              <div className="relative h-20 w-24 overflow-hidden rounded-xl bg-zinc-100">
+              <div className="relative h-20 w-24 shrink-0 overflow-hidden rounded-xl bg-zinc-100">
                 {i.imageUrl ? (
                   <Image src={i.imageUrl} alt={i.name} fill className="object-cover" />
                 ) : null}
               </div>
-              <div className="flex-1 space-y-1">
+              <div className="min-w-0 flex-1 space-y-1">
                 <div className="flex flex-wrap items-start justify-between gap-2">
-                  <div>
-                    <div className="text-sm font-semibold">{i.name}</div>
+                  <div className="min-w-0">
+                    <div className="line-clamp-2 text-sm font-semibold">{i.name}</div>
                     <div className="text-sm text-black/70">{formatBRL(i.priceCents)}</div>
                   </div>
                   <button
@@ -98,13 +106,14 @@ export default function CarrinhoPage() {
                     Remover
                   </button>
                 </div>
-                <div className="flex items-center gap-2 pt-1">
+                <div className="flex flex-wrap items-center gap-2 pt-1">
                   <span className="text-xs text-black/60">Qtd.</span>
                   <input
                     value={String(i.quantity)}
                     onChange={(e) => cart.setQuantity(i.productId, Number(e.target.value))}
                     inputMode="numeric"
                     className="mm-input w-20"
+                    aria-label={`Quantidade de ${i.name}`}
                   />
                   <Link
                     href={`/produtos/${i.slug}`}
@@ -118,7 +127,7 @@ export default function CarrinhoPage() {
           ))}
         </div>
 
-        <div className="space-y-3 rounded-2xl border border-black/10 bg-white p-5">
+        <aside className="space-y-4 rounded-2xl border border-black/10 bg-white p-5">
           <div className="text-sm font-semibold">Resumo</div>
           <div className="flex items-center justify-between text-sm">
             <span className="text-black/70">Itens</span>
@@ -128,15 +137,80 @@ export default function CarrinhoPage() {
             <span className="text-black/70">Total</span>
             <span className="font-semibold">{formatBRL(cart.totalCents)}</span>
           </div>
-          <div className="pt-2">
-            <label className="text-xs font-semibold text-black/70">Email (opcional)</label>
-            <input
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="seuemail@exemplo.com"
-              className="mm-input mt-1 w-full"
-            />
+
+          <div className="grid gap-3 pt-2">
+            <label className="space-y-1">
+              <span className="text-xs font-semibold text-black/70">Nome</span>
+              <input
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="Seu nome"
+                autoComplete="name"
+                className="mm-input w-full"
+              />
+            </label>
+            <label className="space-y-1">
+              <span className="text-xs font-semibold text-black/70">WhatsApp</span>
+              <input
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                placeholder="(11) 99999-9999"
+                autoComplete="tel"
+                className="mm-input w-full"
+              />
+            </label>
+            <label className="space-y-1">
+              <span className="text-xs font-semibold text-black/70">Email</span>
+              <input
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="seuemail@exemplo.com"
+                type="email"
+                autoComplete="email"
+                className="mm-input w-full"
+              />
+            </label>
           </div>
+
+          <div className="space-y-2">
+            <div className="text-xs font-semibold text-black/70">Pagamento</div>
+            <div className="grid gap-2">
+              {[
+                {
+                  value: "whatsapp",
+                  title: "Pix / WhatsApp",
+                  help: "Sem gateway: a loja confirma manualmente o Pix.",
+                },
+                {
+                  value: "stripe",
+                  title: "Cartão online",
+                  help: "Usa Stripe Checkout se a chave estiver configurada.",
+                },
+              ].map((option) => (
+                <label
+                  key={option.value}
+                  className={[
+                    "cursor-pointer rounded-2xl border p-3 text-sm transition",
+                    paymentMethod === option.value
+                      ? "border-black bg-amber-50"
+                      : "border-black/10 bg-white hover:bg-zinc-50",
+                  ].join(" ")}
+                >
+                  <input
+                    type="radio"
+                    name="paymentMethod"
+                    value={option.value}
+                    checked={paymentMethod === option.value}
+                    onChange={() => setPaymentMethod(option.value as PaymentMethod)}
+                    className="sr-only"
+                  />
+                  <span className="block font-semibold">{option.title}</span>
+                  <span className="mt-1 block text-xs text-black/60">{option.help}</span>
+                </label>
+              ))}
+            </div>
+          </div>
+
           <button
             type="button"
             disabled={loading}
@@ -146,12 +220,10 @@ export default function CarrinhoPage() {
             {loading ? "Processando..." : "Finalizar compra"}
           </button>
           <p className="text-xs text-black/60">
-            Se o Stripe não estiver configurado, o checkout abre o WhatsApp com o pedido
-            pronto.
+            O pedido é recalculado no servidor e o estoque é conferido antes do pagamento.
           </p>
-        </div>
+        </aside>
       </div>
     </div>
   );
 }
-

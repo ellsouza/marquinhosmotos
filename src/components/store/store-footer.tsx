@@ -29,9 +29,11 @@ function FooterActionLink({
 export function StoreFooter() {
   const store = getStorePublicConfig();
   const mapQuery = store.googleMapsQuery || store.address;
-  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-    mapQuery,
-  )}`;
+  const mapsUrl =
+    store.googleMapsUrl ||
+    `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+      mapQuery,
+    )}`;
   const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
     mapQuery,
   )}`;

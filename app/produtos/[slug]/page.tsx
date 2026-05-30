@@ -2,6 +2,7 @@ import Link from "next/link";
 import { formatBRL } from "@/lib/money";
 import { getProductBySlug } from "@/lib/catalog";
 import { AddToCartButton } from "@/components/cart/add-to-cart-button";
+import { FavoriteButton } from "@/components/favorites/favorite-button";
 import { WhatsAppCta } from "@/components/store/whatsapp-cta";
 
 export default async function ProdutoDetalhePage({
@@ -62,17 +63,29 @@ export default async function ProdutoDetalhePage({
         ) : null}
 
         <div className="space-y-3">
-          <AddToCartButton
-            product={{
-              productId: product.id,
-              slug: product.slug,
-              name: product.name,
-              priceCents: product.priceCents,
-              imageUrl: product.imageUrl,
-            }}
-            className="mm-btn mm-btn-primary w-full py-3"
-            label="Adicionar ao carrinho"
-          />
+          <div className="grid grid-cols-[1fr_auto] gap-2">
+            <AddToCartButton
+              product={{
+                productId: product.id,
+                slug: product.slug,
+                name: product.name,
+                priceCents: product.priceCents,
+                imageUrl: product.imageUrl,
+              }}
+              className="mm-btn mm-btn-primary w-full py-3"
+              label="Adicionar ao carrinho"
+            />
+            <FavoriteButton
+              product={{
+                productId: product.id,
+                slug: product.slug,
+                name: product.name,
+                priceCents: product.priceCents,
+                imageUrl: product.imageUrl,
+              }}
+              className="mm-btn mm-btn-outline-dark mm-iconbtn h-full"
+            />
+          </div>
           <Link
             href="/carrinho"
             className="block text-center text-sm underline underline-offset-4"

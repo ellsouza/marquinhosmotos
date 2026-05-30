@@ -2,6 +2,7 @@ import Link from "next/link";
 import { formatBRL } from "@/lib/money";
 import { listCategories, listProducts } from "@/lib/catalog";
 import { AddToCartButton } from "@/components/cart/add-to-cart-button";
+import { FavoriteButton } from "@/components/favorites/favorite-button";
 import { WhatsAppCta } from "@/components/store/whatsapp-cta";
 
 function toInt(value: unknown, fallback: number) {
@@ -141,15 +142,26 @@ export default async function ProdutosPage({
                   <div className="line-clamp-2 text-sm font-semibold">{p.name}</div>
                   <div className="text-sm text-black/70">{formatPrice(p.priceCents)}</div>
                 </div>
-                <AddToCartButton
-                  product={{
-                    productId: p.id,
-                    slug: p.slug,
-                    name: p.name,
-                    priceCents: p.priceCents,
-                    imageUrl: p.imageUrl,
-                  }}
-                />
+                <div className="grid grid-cols-[1fr_auto] gap-2">
+                  <AddToCartButton
+                    product={{
+                      productId: p.id,
+                      slug: p.slug,
+                      name: p.name,
+                      priceCents: p.priceCents,
+                      imageUrl: p.imageUrl,
+                    }}
+                  />
+                  <FavoriteButton
+                    product={{
+                      productId: p.id,
+                      slug: p.slug,
+                      name: p.name,
+                      priceCents: p.priceCents,
+                      imageUrl: p.imageUrl,
+                    }}
+                  />
+                </div>
                 <Link
                   href={`/produtos/${p.slug}`}
                   className="block text-center text-sm text-black/70 underline underline-offset-4 hover:text-black"

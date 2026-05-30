@@ -23,6 +23,7 @@ type CartContextValue = {
 };
 
 const STORAGE_KEY = "mm_cart_v1";
+const EMPTY_CART: CartItem[] = [];
 
 const CartContext = createContext<CartContextValue | null>(null);
 
@@ -61,7 +62,7 @@ function clampQuantity(quantity: number) {
 }
 
 function readCartFromStorage(): CartItem[] {
-  if (typeof window === "undefined") return [];
+  if (typeof window === "undefined") return EMPTY_CART;
 
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
@@ -98,10 +99,14 @@ function readCartFromStorage(): CartItem[] {
 }
 
 function getSnapshot() {
-  if (typeof window === "undefined") return [];
+  if (typeof window === "undefined") return EMPTY_CART;
   if (cachedItems) return cachedItems;
   cachedItems = readCartFromStorage();
   return cachedItems;
+}
+
+function getServerSnapshot() {
+  return EMPTY_CART;
 }
 
 function persist(next: CartItem[]) {
@@ -115,7 +120,7 @@ function persist(next: CartItem[]) {
 }
 
 export function CartProvider({ children }: { children: ReactNode }) {
-  const items = useSyncExternalStore(subscribe, getSnapshot, () => []);
+  const items = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   const value = useMemo<CartContextValue>(() => {
     const count = items.reduce((acc, i) => acc + i.quantity, 0);
